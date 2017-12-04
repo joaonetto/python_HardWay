@@ -99,4 +99,4 @@ VOLUME /var/python_hardway
 # Change WorkDir
 WORKDIR /var/python_hardway
 
-CMD ["python3"]
+# CMD ["python3"]
