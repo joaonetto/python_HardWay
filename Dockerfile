@@ -92,4 +92,10 @@ RUN set -ex; \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
 
+# Cria Diretorio de Estudo
+RUN mkdir /jnetto/study
+
+# Create a Volume
+VOLUME /jnetto/study
+
 CMD ["python3"]
