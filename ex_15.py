@@ -21,7 +21,7 @@ print("Type the filename again:")
 file_again = input("> ")
 
 if os.path.isfile(file_again) == False:
-    print(f"Você passou um novo arquivo {file_again} que não existe.\nVerifique o nome e execute novamente")
+    print(f"Você passou um novo arquivo chamado de {file_again} que não existe.\nVerifique o nome e execute novamente")
     exit()
 
 txt_again = open(file_again)
