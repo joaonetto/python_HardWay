@@ -12,7 +12,7 @@ if os.path.isfile(filename) == False:
     print(f"O arquivo {filename} não existe.\nVerifique o nome e execute novamente")
     exit()
 
-txt = open(filename)
+txt = open(filename, "r")
 
 print(f"Here's your file {filename}:")
 print(txt.read())
@@ -24,6 +24,6 @@ if os.path.isfile(file_again) == False:
     print(f"Você passou um novo arquivo chamado de {file_again} que não existe.\nVerifique o nome e execute novamente")
     exit()
 
-txt_again = open(file_again)
+txt_again = open(file_again, "r")
 
 print(txt_again.read())
