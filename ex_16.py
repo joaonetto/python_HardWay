@@ -27,15 +27,15 @@ print("Opening the File...")
 #   -> Onde o arquivo que será aberto é binario
 target=open(filename, 'w+t')
 
-print("Truncating the file. Goodbye!")
+#print("Truncating the file. Goodbye!")
 # Exclui o conteudo do arquivo. Veja que ao abrir um arquivo existente com conteudo,
 # ele será apagado
-target.truncate()
+#target.truncate()
 
 print("Now I'm going to ask you for three lines.")
 
 # Coloca as questoes em uma array e apresenta para o usuário
-line = [input("Line 1: "), input("Line 2: "), input("Line 3: ")]
+line = [ input("Line 1: "), input("Line 2: "), input("Line 3: ") ]
 
 print(f"A Array de Line ficou como a seguir: {line}")
 print("I'm going to write these to the file.")
