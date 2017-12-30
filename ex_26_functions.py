@@ -54,13 +54,16 @@ def header_footer(myword, line, file, caracter, howmany):
 
     for x in range (0,int(howmany)):
         myword += caracter
+
     myword = myword + "\n# " + line + file
     mytmp = len("# " + line + file)
     for x in range(mytmp,int(howmany)-1):
         myword += " "
+
     myword += "#\n"
     for x in range (0,int(howmany)):
         myword += caracter
+        
     return myword + "\n\n"
 
 def secret_formula(started):
