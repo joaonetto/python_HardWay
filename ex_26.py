@@ -14,7 +14,7 @@ mytext = ex_26_functions.header_footer(
     "Openning your file ",
     filename,
     "#",
-    "50"
+    50
 )
 
 mytext += open(filename).read()
@@ -24,7 +24,7 @@ mytext = ex_26_functions.header_footer(
     "Closing your file ",
     filename,
     "#",
-    "50"
+    50
 )
 
 print(f"""
