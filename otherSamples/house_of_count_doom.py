@@ -318,8 +318,6 @@ def roomD(user):
         else:
             print("What are you doing?")
 
-
-
 def room_1(user):
     print("Well... you've gone and done it.")
     print("You just broke the matrix. You are now in limbo.")
