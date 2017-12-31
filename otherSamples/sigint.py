@@ -1,5 +1,9 @@
 import signal
 import sys
+
+# learn more about Signal in:
+# https://docs.python.org/dev/library/signal.html
+
 def signal_handler(signal, frame):
         print('You pressed Ctrl+C!')
         sys.exit(0)
