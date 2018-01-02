@@ -8,6 +8,21 @@ Terms:
   -> >= (greater-than-equal)
   -> < (less-than)
   -> <= (less-than-equal)
+  -> ** (exponencial)
+    Exemplo:
+    a = 3
+    b = 2
+    a ** b = 9
+  -> // (Divisão sem o resto)
+    Exemplo:
+    a = 5
+    b = 2
+    a // b = 2
+  -> % (O Resultado do resto de uma divisão)
+    Exemplo:
+    a = 5
+    b = 2
+    a % b = 1
   -> True
   -> False
 
