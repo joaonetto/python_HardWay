@@ -1,26 +1,68 @@
 # Mais sobre listas, veja em:
 # https://www.tutorialspoint.com/python/python_lists.htm
 
-first = [ (0,1,2,4), (2,3,5), (7,8), ("ge-0/0/1", "unit 0", "10.10.10.1/24")]
+import re
+# [(0, 1, 2, 4), (2, 3, 5), (7, 8), ('ge-0/0/1', 'unit 0', '10.10.10.1/24'), ('ge-0/0/2', 'unit 1', '10.10.20.1/24'), ('ge-0/0/3', 'unit 100', '10.10.30.1/24'), ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H')]
 
-print(f"O valor de first é: {first}")
+def inclui_em_first(list1, list2):
+    b = 0
+    while b < (len(list2)):
+        for b in range(0, len(list2)):
+            list1.append(list2[b])
+        b += 1
+        return list1
+
+first = [
+    (0,1,2,4),
+    (2,3,5),
+    (7,8),
+    ("ge-0/0/1", "unit 0", "10.10.10.1/24")
+]
+
+first_new = [
+    ("ge-0/0/2", "unit 1",  "10.10.20.1/24"),
+    ("ge-0/0/3", "unit 100","10.10.30.1/24"),
+    ("A", "B", "C", "D", "E", "F", "G", "H")
+]
+
+print(f"O valor de first é: {first} = {len(first)}")
 print(f"O tamanho da primeira parte: {len(first[0])}")
 print(f"O tamanho da segunda parte: {len(first[1])}")
 print(f"O tamanho da terceira parte: {len(first[2])}")
+print("Adicionando uma 4o Parte a First")
+print(f"A nova parte a ser adicionada em first é: {first_new}")
 
-a = len(first)
+first = inclui_em_first(first, first_new)
+
+print(f"O tamanho da quarta parte: {len(first[3])}")
+print(f"O valor de first é: {first} = {len(first)}")
+
 b = 0
-while ((b + 1) < a):
-    for b in range(0, a):
-        print(f"O valor de b é: {b}")
-        print(f"O valor de a é: {a}")
-        c = len(first[b])
-        for d in range(0, c):
-            print(f"O valor de first é: {first[b][d]}")
+while b < len(first):
+    for b in range(0, len(first)):
+        for d in range(0, len(first[b])):
+            print(f"O valor de first[{b}][{d}] é: {first[b][d]}")
+    b += 1
+
+print("\nVamos encontrar as interfaces ge:")
+
+match = re.search(r'ge', str(first[0][0]))
+print(f"O Resultado é: {match}")
+
+b = 0
+while b < len(first):
+    for b in range(0, len(first)):
+        for d in range(0, len(first[b])):
+            match = re.search(r'ge', str(first[b][d]))
+            if match:
+                print(f"A string \"ge\" foi encontrada em first[{b}][{d}] com o resultado: {first[b][d]}")
+    b += 1
+
+
 
 
 print("\nRetorna os objetos de first:")
-print(dir(first))
+print(dir(match))
 
 # Utilizando COUNT
 #
