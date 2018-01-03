@@ -58,11 +58,8 @@ while b < len(first):
                 print(f"A string \"ge\" foi encontrada em first[{b}][{d}] com o resultado: {first[b][d]}")
     b += 1
 
-
-
-
 print("\nRetorna os objetos de first:")
-print(dir(match))
+print(dir(first))
 
 # Utilizando COUNT
 #
