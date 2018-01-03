@@ -1,5 +1,7 @@
 # Mais sobre listas, veja em:
 # https://www.tutorialspoint.com/python/python_lists.htm
+# Working with Regular Expressions:
+# https://www.python-course.eu/re.php
 
 import re
 # [(0, 1, 2, 4), (2, 3, 5), (7, 8), ('ge-0/0/1', 'unit 0', '10.10.10.1/24'), ('ge-0/0/2', 'unit 1', '10.10.20.1/24'), ('ge-0/0/3', 'unit 100', '10.10.30.1/24'), ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H')]
@@ -44,10 +46,9 @@ while b < len(first):
             print(f"O valor de first[{b}][{d}] é: {first[b][d]}")
     b += 1
 
-print("\nVamos encontrar as interfaces ge:")
-
+print("\n\nVamos encontrar as interfaces \"ge\" utilizando REGEX:")
+print("----------------------------------------------------")
 match = re.search(r'ge', str(first[0][0]))
-print(f"O Resultado é: {match}")
 
 b = 0
 while b < len(first):
@@ -58,8 +59,28 @@ while b < len(first):
                 print(f"A string \"ge\" foi encontrada em first[{b}][{d}] com o resultado: {first[b][d]}")
     b += 1
 
+print("\n\nVamos encontrar o caracter \"/\" utilizando \"IN\":")
+print("-----------------------------------------------")
+
+b = 0
+while b < len(first):
+    for b in range(0, len(first)):
+        for d in range(0, len(first[b])):
+            if "/" in str(first[b][d]):
+                print(f"A string \"ge\" foi encontrada em first[{b}][{d}] com o resultado: {first[b][d]}")
+    b += 1
+
+
 print("\nRetorna os objetos de first:")
 print(dir(first))
+
+sentense = "Ola Tudo Bem"
+
+print(sentense)
+if "B" in sentense:
+    print("Existe")
+else:
+    print("Não existe")
 
 # Utilizando COUNT
 #
