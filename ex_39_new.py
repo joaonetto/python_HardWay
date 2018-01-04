@@ -1,4 +1,11 @@
 import os
+from sys import argv
+
+if len(argv) != 2:
+    print(f"Para este script é necessário 2 argumentos, mas você passou apenas {len(argv)}")
+    exit()
+
+script, pais = argv
 
 os.system('clear')
 
