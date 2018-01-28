@@ -13,6 +13,7 @@ class Dog(Animal):
         ## Two parameters: Self and name
         ## Another return was created, AGE
         ## class Dog has a __init__ that takes self and name parameters
+        ## Dog has-a name
         self.name = name
         self.age = 10
 
@@ -22,6 +23,7 @@ class Cat(Animal):
     def __init__(self, name):
         ## Two parameters: Self and name
         ## class Cat has a __init__ that takes self and name parameters
+        ## Cat has-a name
         self.name = name
 
 ## Person is-a object
@@ -30,6 +32,7 @@ class Person(object):
     def __init__(self, name):
         ## Two parameters: Self and name
         ## class Pernon has a __init__ that takes self and name parameters
+        ## Person has-a name
         self.name = name
 
         ## Person has-a pet of some kind
@@ -93,11 +96,11 @@ print(dir(frank))
 frank.pet = rover
 print(frank.pet)
 
-## ??
+## flipper is-a Fish
 flipper = Fish()
 
-## ??
+## crouse is-a Salmon
 crouse = Salmon()
 
-## ??
+## harry is-a Habilut
 harry = Habilut()
