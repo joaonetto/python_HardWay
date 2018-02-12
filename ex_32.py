@@ -1,9 +1,9 @@
 # nice place to read:
 # https://www.tutorialspoint.com/python/python_lists.htm
 
-the_count = [ 1, 2, 3, 4, 5]
-fruits = [ 'apples', 'oranges', 'pears', 'apricots' ]
-change = [ 1, 'pennies', 2, 'dimes', 3, 'quarters']
+the_count = [1, 2, 3, 4, 5]
+fruits = ['apples', 'oranges', 'pears', 'apricots']
+change = [1, 'pennies', 2, 'dimes', 3, 'quarters']
 
 #This first kind of for-loop goes throught a list
 
