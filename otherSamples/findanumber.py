@@ -16,7 +16,7 @@ loop = 1
 for loop in range(loop, qtdTentativas):
     resultado = int(input("Informe um número? "))
     if resultado == meuNumero:
-        print(f"Parabéns, você acertou.\nPrecisou de {loop} em vez(es) !")
+        print(f"Parabéns, você acertou.\nPrecisou de {loop} chance(s) !")
         exit(1)
     elif resultado < meuNumero:
         print("Valor Abaixo !!!\n")
