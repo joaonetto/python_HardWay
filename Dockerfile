@@ -3,6 +3,7 @@
 #
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
+# Python 3.6.4
 
 FROM buildpack-deps:jessie
 
@@ -115,16 +116,30 @@ RUN set -ex; \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
 
+#
 # Install iPython
+#
 RUN pip install ipython
 
+#
 # Upgrade jessie
-RUN apt-get update
+#
+RUN apt-get update && apt-get -y upgrade
 
+#
+# Set Timezone
+#
+ENV TZ=America/Sao_Paulo
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+#
 # Create a Volume
+#
 VOLUME /var/python_hardway
 
+#
 # Change WorkDir
+#
 WORKDIR /var/python_hardway
 
 # CMD ["python3"]
