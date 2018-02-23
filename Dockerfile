@@ -115,6 +115,12 @@ RUN set -ex; \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
 
+# Install iPython
+RUN pip install ipython
+
+# Upgrade jessie
+RUN apt-get update
+
 # Create a Volume
 VOLUME /var/python_hardway
 
