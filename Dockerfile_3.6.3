@@ -11,14 +11,14 @@ ENV PATH /usr/local/bin:$PATH
 
 # http://bugs.python.org/issue19846
 # > At the moment, setting "LANG=C" on a Linux system *fundamentally breaks Python 3*, and that's not OK.
-ENV LANG C.UTF-8
-ENV PYTHONIOENCODING=utf-8
+# ENV LANG C.UTF-8
+# ENV PYTHONIOENCODING=utf-8
 
 # runtime dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		tcl \
 		tk \
-    locales \
+		locales \
 	&& rm -rf /var/lib/apt/lists/*
 
 #
@@ -43,7 +43,7 @@ ENV PYTHONIOENCODING=utf-8
 
 # call PYTHON
 ENV GPG_KEY 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D
-ENV PYTHON_VERSION 3.6.4
+ENV PYTHON_VERSION 3.6.3
 
 RUN set -ex \
 	&& buildDeps=' \
@@ -114,6 +114,7 @@ RUN set -ex; \
 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
+
 
 # Create a Volume
 VOLUME /var/python_hardway
