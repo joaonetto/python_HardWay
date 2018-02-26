@@ -117,6 +117,11 @@ RUN set -ex; \
 	rm -f get-pip.py
 
 #
+# Upgrade jessie
+#
+RUN apt-get update && apt-get -y upgrade
+
+#
 # Install iPython
 #
 RUN pip install ipython
@@ -125,11 +130,6 @@ RUN pip install ipython
 # Install Juniper PyEz
 #
 RUN pip install junos-eznc
-
-#
-# Upgrade jessie
-#
-RUN apt-get update && apt-get -y upgrade
 
 #
 # Set Timezone
