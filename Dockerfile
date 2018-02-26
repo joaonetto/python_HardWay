@@ -124,7 +124,7 @@ RUN pip install ipython
 #
 # Install Juniper PyEz
 #
-RUNpip install junos-eznc
+RUN pip install junos-eznc
 
 #
 # Upgrade jessie
