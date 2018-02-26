@@ -122,6 +122,11 @@ RUN set -ex; \
 RUN pip install ipython
 
 #
+# Install Juniper PyEz
+#
+RUNpip install junos-eznc
+
+#
 # Upgrade jessie
 #
 RUN apt-get update && apt-get -y upgrade
