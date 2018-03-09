@@ -20,6 +20,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		tcl \
 		tk \
     locales \
+		vim \
+		nano \
 	&& rm -rf /var/lib/apt/lists/*
 
 #
