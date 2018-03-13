@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     locales \
 		vim \
 		nano \
+		snmp \
 	&& rm -rf /var/lib/apt/lists/*
 
 #
@@ -132,6 +133,11 @@ RUN pip install ipython
 # Install Juniper PyEz
 #
 RUN pip install junos-eznc
+
+#
+# Install PySNMP
+#
+RUN pip install pysnmp
 
 #
 # Set Timezone

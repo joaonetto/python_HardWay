@@ -4,12 +4,11 @@ import os
 os.system('clear')
 
 a = '			<td><a href="http://www.juniper.net/support/downloads/?p=mx5#sw" target="_blank">MX5</a>, <a href="http://www.juniper.net/support/downloads/?p=mx10#sw" target="_blank">MX10</a>, <a href="http://www.juniper.net/support/downloads/?p=mx40#sw" target="_blank">MX40</a>, <a href="http://www.juniper.net/support/downloads/?p=mx80#sw">MX80</a>, <a href="http://www.juniper.net/support/downloads/?p=mx104#sw" target="_blank">MX104</a> Series</td>'
-
-
 firstTime = True
 findValue = 'target="_blank">'
 while a.find(findValue) != -1:
     print("*" * 40)
+    print(f"Valor de find: {a.find(findValue)}")
     print(f"Valor de a-1: {a}")
     if findValue in a:
         a = a[a.find(findValue) + len(findValue):len(a)]
@@ -29,5 +28,10 @@ while a.find(findValue) != -1:
             print("*" * 40)
     else:
         print("teste")
-
-print(f"Valor de Final tempPlataforma: {tempPlataforma}")
+else:
+    try:
+        tempPlataforma
+    except NameError:
+        print("Não Definida")
+    else:
+        print("Definida")
