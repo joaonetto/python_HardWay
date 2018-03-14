@@ -140,6 +140,11 @@ RUN pip install junos-eznc
 RUN pip install pysnmp
 
 #
+# Install TermColor
+#
+RUN pip install termcolor
+
+#
 # Set Timezone
 #
 ENV TZ=America/Sao_Paulo

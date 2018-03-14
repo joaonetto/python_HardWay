@@ -4,9 +4,13 @@ import ipaddress
 from pprint import pprint
 from jnpr.junos import Device
 from jnpr.junos.exception import ConnectError
+from jnpr.junos.op.ethport import EthPortTable
 
 os.system('clear')
 
+device_ip = '10.151.2.251'
+
+"""
 #
 # Verifica se o IP informado esta com o formato correto de IPv4
 #
@@ -20,6 +24,7 @@ except ValueError:
 # Informa que o IP foi aceito e que o script terá continuidade
 #
 print("\nIP Válido.\nIniciando tentativa de conexão.\nAguarde !!!")
+"""
 
 #
 # Inicia Variavel para conectar no Juniper
@@ -50,6 +55,24 @@ print(f"    Número de Série: {junosDev.facts['serialnumber']}")
 print(f"    Versão do JUNOS: {junosDev.facts['version']}")
 print(f"           Hostname: {junosDev.facts['hostname']}")
 print(f"Tipo de Dispositivo: {junosDev.facts['ifd_style']}")
+print("=" * 60 + "Dir de ETHs")
+eths = EthPortTable(junosDev).get(interface_name='ge-0/0/0')
+print(dir(eths))
+print("=" * 60 + "Keys de ETHs")
+print(eths.keys())
+print("=" * 60 + "Items de ETHs")
+print(eths.items())
+print("=" * 60 + "Values de ETHs")
+print(eths.values())
+pprint(eths)
+print("=" * 60 + "Values DIR GE-0/0/3")
+print(dir(eths.values()))
+print("=" * 60 + "Values OPER GE-0/0/3")
+for port in eths:
+    print(f"Interface: {port.name}, Oper Status: {port.oper}")
+
+
+
 
 #pprint( junosDev.facts )
 junosDev.close()
