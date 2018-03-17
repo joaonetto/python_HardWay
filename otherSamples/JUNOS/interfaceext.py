@@ -1,6 +1,7 @@
 import os
 import sys
 import ipaddress
+import json
 from pprint import pprint as pp
 from jnpr.junos import Device
 from jnpr.junos.exception import ConnectError
@@ -11,6 +12,11 @@ from jnpr.junos.op.phyport import PhyPortErrorTable
 os.system('clear')
 
 device_ip = '10.151.2.251'
+
+def jdefault(o):
+    if isinstance(o, set):
+        return list(o)
+    return o.__dict__
 
 """
 #
@@ -43,26 +49,113 @@ except ConnectError as err:
     print(f"Erro:\n\t{err}")
     sys.exit(1)
 
-getPhyPortTable = PhyPortTable(junosDev).get(interface_name='ge-0/0/0')
-getPhyPortStatsTable = PhyPortStatsTable(junosDev).get(interface_name='ge-0/0/0')
-getPhyPortErrorTable = PhyPortErrorTable(junosDev).get(interface_name='ge-0/0/0')
+#getPhyPortTable = PhyPortTable(junosDev).get(interface_name='ge-0/0/0')
+#getPhyPortStatsTable = PhyPortStatsTable(junosDev).get(interface_name='ge-0/0/0')
+#getPhyPortErrorTable = PhyPortErrorTable(junosDev).get(interface_name='ge-0/0/0')
 
-print("=" * 60 + "getPhyPortTable dir")
-print(dir(getPhyPortTable.keys()))
+getPhyPortTable = PhyPortTable(junosDev).get()
+#getPhyPortStatsTable = PhyPortStatsTable(junosDev).get()
+getPhyPortErrorTable = PhyPortErrorTable(junosDev).get()
 
-print("=" * 60 + "getPhyPortTable Items")
-print(getPhyPortTable.items())
-print("=" * 60 + "getPhyPortStatsTable Items")
-print(getPhyPortStatsTable.items())
-print("=" * 60 + "getPhyPortErrorTable Items")
-print(getPhyPortErrorTable.items())
+data = dict()
 
-#print(getPhyPortTable.values())
-"""
-for port in getPhyPortTable, getPhyPortStatsTable, getPhyPortErrorTable:
+hostname = junosDev.facts['hostname']
+serialNumber = junosDev.facts['serialnumber']
+modelHW = junosDev.facts['model']
+
+data['hardware'] = {junosDev.facts['serialnumber']:
+                        {'type':
+                            {'hostname': junosDev.facts['hostname'],
+                             'modelo_hw': junosDev.facts['model'],
+                             'version_sw': junosDev.facts['version']
+                            }
+                        }
+                    }
+
+#data['hardware'] = {serialNumber: {'statistics': {'RX': '10Mbps',
+#                                                  'TX': '200Mbps'}}}
+
+#print(dir(data))
+#print(json.dumps(data, indent=2))
+
+#print(data['hardware'])
+
+
+for port in getPhyPortTable:
     if port.oper != 'down':
-        dataPort = port.name + " - " + port.oper + " - " + port.admin
-        if port.description != None:
-            dataPort += " - " + port.description
-        print(dataPort)
-"""
+        print(data['hardware'][junosDev.facts['serialnumber']].keys())
+        if 'interface_name' not in data['hardware'][junosDev.facts['serialnumber']].keys():
+            data['hardware'][junosDev.facts['serialnumber']].update(
+                {'interface_name':
+                    {port.name:
+                        {'port_info':
+                            {
+                                'operStatus': port.oper,
+                                 'adminStatus': port.admin,
+                                 'description': port.description,
+                                 'mtu': port.mtu,
+                                 'link_mode': port.link_mode,
+                                 'speed': port.speed,
+                                 'macAddress': port.macaddr,
+                                 'lastFlapped': port.flapped
+                            }
+                        }
+                    }
+                }
+            )
+        else:
+            data['hardware'][junosDev.facts['serialnumber']]['interface_name'].update(
+                {port.name:
+                    {'port_info':
+                        {
+                            'operStatus': port.oper,
+                             'adminStatus': port.admin,
+                             'description': port.description,
+                             'mtu': port.mtu,
+                             'link_mode': port.link_mode,
+                             'speed': port.speed,
+                             'macAddress': port.macaddr,
+                             'lastFlapped': port.flapped
+                        }
+                    }
+                }
+            )
+        for errorPhy in getPhyPortErrorTable:
+            if port.name == errorPhy.name:
+                data['hardware'][junosDev.facts['serialnumber']]['interface_name'][port.name].update(
+                    {'transmission_data':
+                        {
+                            'rx_bytes': errorPhy.rx_bytes,
+                            'rx_packets': errorPhy.rx_packets,
+                            'tx_bytes': errorPhy.tx_bytes,
+                            'tx_packets': errorPhy.tx_packets
+                        },
+                     'error_interface':
+                        {
+                            'rx_err_input': errorPhy.rx_err_input,
+                            'rx_err_drops': errorPhy.rx_err_drops,
+                            'rx_err_frame': errorPhy.rx_err_frame,
+                            'rx_err_runts': errorPhy.rx_err_runts,
+                            'rx_err_discards': errorPhy.rx_err_discards,
+                            #'rx_err_l2-channel': errorPhy.rx_err_l2-channel,
+                            #'rx_err_l2-mismatch': errorPhy.rx_err_l2-mismatch,
+                            #'rx_err_l3-incompletes': errorPhy.rx_err_l3-incompletes,
+                            'rx_err_fifo': errorPhy.rx_err_fifo,
+                            'rx_err_resource': errorPhy.rx_err_resource,
+                            #'tx_err_carrier-transitions': errorPhy.tx_err_carrier-transitions
+                            'tx_err_output': errorPhy.tx_err_output,
+                            'tx_err_collisions': errorPhy.tx_err_collisions,
+                            'tx_err_drops': errorPhy.tx_err_drops,
+                            'tx_err_aged': errorPhy.tx_err_aged,
+                            'tx_err_mtu': errorPhy.tx_err_mtu,
+                            #'tx_err_hs-crc': errorPhy.tx_err_hs-crc
+                            'tx_err_fifo': errorPhy.tx_err_fifo,
+                            'tx_err_resource': errorPhy.tx_err_resource
+                        }
+                    }
+                )
+
+with open('junos_interface.json', 'w') as f:
+    json.dump(data, f, indent = 2)
+    
+print(json.dumps(data, indent = 2))
