@@ -2,21 +2,15 @@ import os
 import sys
 import ipaddress
 import json
+import yaml
 from pprint import pprint as pp
 from jnpr.junos import Device
 from jnpr.junos.exception import ConnectError
-from jnpr.junos.op.phyport import PhyPortTable
-from jnpr.junos.op.phyport import PhyPortStatsTable
-from jnpr.junos.op.phyport import PhyPortErrorTable
+from jnpr.junos.factory.factory_loader import FactoryLoader
 
 os.system('clear')
 
 device_ip = '10.151.2.251'
-
-def jdefault(o):
-    if isinstance(o, set):
-        return list(o)
-    return o.__dict__
 
 """
 #
@@ -49,13 +43,16 @@ except ConnectError as err:
     print(f"Erro:\n\t{err}")
     sys.exit(1)
 
-#getPhyPortTable = PhyPortTable(junosDev).get(interface_name='ge-0/0/0')
-#getPhyPortStatsTable = PhyPortStatsTable(junosDev).get(interface_name='ge-0/0/0')
-#getPhyPortErrorTable = PhyPortErrorTable(junosDev).get(interface_name='ge-0/0/0')
+if os.path.isfile("interfaceext.yml") == True:
+    with open("interfaceext.yml", 'r') as stream:
+        try:
+            globals().update(FactoryLoader().load(yaml.load(stream)))
+        except yaml.YAMLError as exc:
+            print(exc)
 
-getPhyPortTable = PhyPortTable(junosDev).get()
-#getPhyPortStatsTable = PhyPortStatsTable(junosDev).get()
-getPhyPortErrorTable = PhyPortErrorTable(junosDev).get()
+getCustomData = customPhyPortTable(junosDev)
+myCustomData = getCustomData.get().to_json()
+myCustomData = json.loads(myCustomData)
 
 data = dict()
 
@@ -72,32 +69,52 @@ data['hardware'] = {junosDev.facts['serialnumber']:
                         }
                     }
 
-#data['hardware'] = {serialNumber: {'statistics': {'RX': '10Mbps',
-#                                                  'TX': '200Mbps'}}}
-
-#print(dir(data))
-#print(json.dumps(data, indent=2))
-
-#print(data['hardware'])
-
-
-for port in getPhyPortTable:
-    if port.oper != 'down':
-        print(data['hardware'][junosDev.facts['serialnumber']].keys())
+for port in myCustomData:
+    print(port)
+    if myCustomData[port]['oper'] != 'down':
         if 'interface_name' not in data['hardware'][junosDev.facts['serialnumber']].keys():
             data['hardware'][junosDev.facts['serialnumber']].update(
                 {'interface_name':
-                    {port.name:
+                    {port:
                         {'port_info':
                             {
-                                'operStatus': port.oper,
-                                 'adminStatus': port.admin,
-                                 'description': port.description,
-                                 'mtu': port.mtu,
-                                 'link_mode': port.link_mode,
-                                 'speed': port.speed,
-                                 'macAddress': port.macaddr,
-                                 'lastFlapped': port.flapped
+                                'operStatus': myCustomData[port]['oper'],
+                                'adminStatus': myCustomData[port]['admin'],
+                                'description': myCustomData[port]['description'],
+                                'mtu': myCustomData[port]['mtu'],
+                                'link_mode': myCustomData[port]['link_mode'],
+                                'speed': myCustomData[port]['speed'],
+                                'macAddress': myCustomData[port]['macaddr'],
+                                'lastFlapped': myCustomData[port]['flapped']
+                            },
+                        'transmission_data':
+                            {
+                                'rx_bytes': myCustomData[port]['rx_bytes'],
+                                'rx_packets': myCustomData[port]['rx_packets'],
+                                'tx_bytes': myCustomData[port]['tx_bytes'],
+                                'tx_packets': myCustomData[port]['tx_packets']
+                            },
+                        'error_interface':
+                            {
+                                'rx_err_input': myCustomData[port]['rx_err_input'],
+                                'rx_err_drops': myCustomData[port]['rx_err_drops'],
+                                'rx_err_frame': myCustomData[port]['rx_err_frame'],
+                                'rx_err_runts': myCustomData[port]['rx_err_runts'],
+                                'rx_err_discards': myCustomData[port]['rx_err_discards'],
+                                'rx_err_l2_channel': myCustomData[port]['rx_err_l2_channel'],
+                                'rx_err_l2_mismatch': myCustomData[port]['rx_err_l2_mismatch'],
+                                'rx_err_l3_incompletes': myCustomData[port]['rx_err_l3_incompletes'],
+                                'rx_err_fifo': myCustomData[port]['rx_err_fifo'],
+                                'rx_err_resource': myCustomData[port]['rx_err_resource'],
+                                'tx_err_carrier_transitions': myCustomData[port]['tx_err_carrier_transitions'],
+                                'tx_err_output': myCustomData[port]['tx_err_output'],
+                                'tx_err_collisions': myCustomData[port]['tx_err_collisions'],
+                                'tx_err_drops': myCustomData[port]['tx_err_drops'],
+                                'tx_err_aged': myCustomData[port]['tx_err_aged'],
+                                'tx_err_mtu': myCustomData[port]['tx_err_mtu'],
+                                'tx_err_hs-crc': myCustomData[port]['tx_err_hs_crc'],
+                                'tx_err_fifo': myCustomData[port]['tx_err_fifo'],
+                                'tx_err_resource': myCustomData[port]['tx_err_resource']
                             }
                         }
                     }
@@ -105,57 +122,54 @@ for port in getPhyPortTable:
             )
         else:
             data['hardware'][junosDev.facts['serialnumber']]['interface_name'].update(
-                {port.name:
+                {port:
                     {'port_info':
                         {
-                            'operStatus': port.oper,
-                             'adminStatus': port.admin,
-                             'description': port.description,
-                             'mtu': port.mtu,
-                             'link_mode': port.link_mode,
-                             'speed': port.speed,
-                             'macAddress': port.macaddr,
-                             'lastFlapped': port.flapped
+                            'operStatus': myCustomData[port]['oper'],
+                            'adminStatus': myCustomData[port]['admin'],
+                            'description': myCustomData[port]['description'],
+                            'mtu': myCustomData[port]['mtu'],
+                            'link_mode': myCustomData[port]['link_mode'],
+                            'speed': myCustomData[port]['speed'],
+                            'macAddress': myCustomData[port]['macaddr'],
+                            'lastFlapped': myCustomData[port]['flapped']
+                        },
+                    'transmission_data':
+                        {
+                            'rx_bytes': myCustomData[port]['rx_bytes'],
+                            'rx_packets': myCustomData[port]['rx_packets'],
+                            'tx_bytes': myCustomData[port]['tx_bytes'],
+                            'tx_packets': myCustomData[port]['tx_packets']
+                        },
+                    'error_interface':
+                        {
+                            'rx_err_input': myCustomData[port]['rx_err_input'],
+                            'rx_err_drops': myCustomData[port]['rx_err_drops'],
+                            'rx_err_frame': myCustomData[port]['rx_err_frame'],
+                            'rx_err_runts': myCustomData[port]['rx_err_runts'],
+                            'rx_err_discards': myCustomData[port]['rx_err_discards'],
+                            'rx_err_l2_channel': myCustomData[port]['rx_err_l2_channel'],
+                            'rx_err_l2_mismatch': myCustomData[port]['rx_err_l2_mismatch'],
+                            'rx_err_l3_incompletes': myCustomData[port]['rx_err_l3_incompletes'],
+                            'rx_err_fifo': myCustomData[port]['rx_err_fifo'],
+                            'rx_err_resource': myCustomData[port]['rx_err_resource'],
+                            'tx_err_carrier_transitions': myCustomData[port]['tx_err_carrier_transitions'],
+                            'tx_err_output': myCustomData[port]['tx_err_output'],
+                            'tx_err_collisions': myCustomData[port]['tx_err_collisions'],
+                            'tx_err_drops': myCustomData[port]['tx_err_drops'],
+                            'tx_err_aged': myCustomData[port]['tx_err_aged'],
+                            'tx_err_mtu': myCustomData[port]['tx_err_mtu'],
+                            'tx_err_hs-crc': myCustomData[port]['tx_err_hs_crc'],
+                            'tx_err_fifo': myCustomData[port]['tx_err_fifo'],
+                            'tx_err_resource': myCustomData[port]['tx_err_resource']
                         }
                     }
                 }
             )
-        for errorPhy in getPhyPortErrorTable:
-            if port.name == errorPhy.name:
-                data['hardware'][junosDev.facts['serialnumber']]['interface_name'][port.name].update(
-                    {'transmission_data':
-                        {
-                            'rx_bytes': errorPhy.rx_bytes,
-                            'rx_packets': errorPhy.rx_packets,
-                            'tx_bytes': errorPhy.tx_bytes,
-                            'tx_packets': errorPhy.tx_packets
-                        },
-                     'error_interface':
-                        {
-                            'rx_err_input': errorPhy.rx_err_input,
-                            'rx_err_drops': errorPhy.rx_err_drops,
-                            'rx_err_frame': errorPhy.rx_err_frame,
-                            'rx_err_runts': errorPhy.rx_err_runts,
-                            'rx_err_discards': errorPhy.rx_err_discards,
-                            #'rx_err_l2-channel': errorPhy.rx_err_l2-channel,
-                            #'rx_err_l2-mismatch': errorPhy.rx_err_l2-mismatch,
-                            #'rx_err_l3-incompletes': errorPhy.rx_err_l3-incompletes,
-                            'rx_err_fifo': errorPhy.rx_err_fifo,
-                            'rx_err_resource': errorPhy.rx_err_resource,
-                            #'tx_err_carrier-transitions': errorPhy.tx_err_carrier-transitions
-                            'tx_err_output': errorPhy.tx_err_output,
-                            'tx_err_collisions': errorPhy.tx_err_collisions,
-                            'tx_err_drops': errorPhy.tx_err_drops,
-                            'tx_err_aged': errorPhy.tx_err_aged,
-                            'tx_err_mtu': errorPhy.tx_err_mtu,
-                            #'tx_err_hs-crc': errorPhy.tx_err_hs-crc
-                            'tx_err_fifo': errorPhy.tx_err_fifo,
-                            'tx_err_resource': errorPhy.tx_err_resource
-                        }
-                    }
-                )
 
-with open('junos_interface.json', 'w') as f:
+#
+# Caso deseje salver em arquivo o resultado
+#
+with open('interfaceext.json', 'w') as f:
     json.dump(data, f, indent = 2)
-    
 print(json.dumps(data, indent = 2))

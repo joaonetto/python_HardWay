@@ -1,0 +1,364 @@
+{
+  "hardware": {
+    "CU0213394777": {
+      "type": {
+        "hostname": "ACT-SW-03-CPS",
+        "modelo_hw": "EX2200-48T-4G",
+        "version_sw": "12.3R12-S7"
+      },
+      "interface_name": {
+        "ge-0/0/0": {
+          "port_info": {
+            "operStatus": "up",
+            "adminStatus": "up",
+            "description": "Interface de UpLink - Firewall Juniper SRX 240 - ge-0/0/15",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:03",
+            "lastFlapped": "2017-12-22 18:33:18 UTC (1w5d 13:36 ago)"
+          },
+          "transmission_data": {
+            "rx_bytes": 9707584,
+            "rx_packets": 151681,
+            "tx_bytes": 51211944,
+            "tx_packets": 634656
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 33,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          }
+        },
+        "ge-0/0/1": {
+          "port_info": {
+            "operStatus": "up",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:04",
+            "lastFlapped": "2017-12-22 18:45:53 UTC (1w5d 13:24 ago)"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 5,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          }
+        },
+        "ge-0/0/18": {
+          "port_info": {
+            "operStatus": "up",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:15",
+            "lastFlapped": "2017-12-22 18:45:56 UTC (1w5d 13:24 ago)"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 50399442,
+            "tx_packets": 633686
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 5,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          }
+        },
+        "ge-0/0/36": {
+          "port_info": {
+            "operStatus": "up",
+            "adminStatus": "up",
+            "description": "Conexao MX-80 - Interface: ge-1/0/0",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:27",
+            "lastFlapped": "2017-12-22 18:45:49 UTC (1w5d 13:24 ago)"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 23211562,
+            "tx_packets": 192284
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 5,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          }
+        },
+        "ge-0/0/42": {
+          "port_info": {
+            "operStatus": "up",
+            "adminStatus": "up",
+            "description": "Conexao com ACT-VM-01-CPS - Interface vmnic1",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "1000mbps",
+            "macAddress": "3c:61:04:67:6c:03",
+            "lastFlapped": "2017-12-22 18:51:50 UTC (1w5d 13:18 ago)"
+          },
+          "transmission_data": {
+            "rx_bytes": 193119419,
+            "rx_packets": 1782819,
+            "tx_bytes": 592668751,
+            "tx_packets": 1174117
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 33,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          }
+        },
+        "ge-0/0/43": {
+          "port_info": {
+            "operStatus": "up",
+            "adminStatus": "up",
+            "description": "Conexao com ACT-VM-02-CPS - Interface vmnic1",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "1000mbps",
+            "macAddress": "3c:61:04:67:6c:04",
+            "lastFlapped": "2017-12-22 18:48:36 UTC (1w5d 13:21 ago)"
+          },
+          "transmission_data": {
+            "rx_bytes": 668586025,
+            "rx_packets": 1499118,
+            "tx_bytes": 40073998,
+            "tx_packets": 293604
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 31,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          }
+        },
+        "ge-0/0/44": {
+          "port_info": {
+            "operStatus": "up",
+            "adminStatus": "up",
+            "description": "Conexao com ACT-VM-01-CPS - Interface vmnic2",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "1000mbps",
+            "macAddress": "3c:61:04:67:6c:03",
+            "lastFlapped": "2017-12-22 18:52:21 UTC (1w5d 13:17 ago)"
+          },
+          "transmission_data": {
+            "rx_bytes": 169096473,
+            "rx_packets": 1149551,
+            "tx_bytes": 24184712,
+            "tx_packets": 113104
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 13,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          }
+        },
+        "ge-0/0/45": {
+          "port_info": {
+            "operStatus": "up",
+            "adminStatus": "up",
+            "description": "Conexao com ACT-VM-02-CPS - Interface vmnic2",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "1000mbps",
+            "macAddress": "3c:61:04:67:6c:04",
+            "lastFlapped": "2017-12-22 18:49:09 UTC (1w5d 13:21 ago)"
+          },
+          "transmission_data": {
+            "rx_bytes": 146982612,
+            "rx_packets": 1145941,
+            "tx_bytes": 124785601,
+            "tx_packets": 1288554
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 15,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          }
+        },
+        "ge-0/0/46": {
+          "port_info": {
+            "operStatus": "up",
+            "adminStatus": "up",
+            "description": "Conexao com DefensePro - Porta G1",
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:31",
+            "lastFlapped": "2017-12-22 18:52:18 UTC (1w5d 13:18 ago)"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 50577215,
+            "tx_packets": 634385
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 49,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          }
+        }
+      }
+    }
+  }
+}
