@@ -10,9 +10,8 @@ from jnpr.junos.factory.factory_loader import FactoryLoader
 
 os.system('clear')
 
-device_ip = '10.151.2.251'
+#device_ip = '10.151.2.251'
 
-"""
 #
 # Verifica se o IP informado esta com o formato correto de IPv4
 #
@@ -26,7 +25,7 @@ except ValueError:
 # Informa que o IP foi aceito e que o script terá continuidade
 #
 print("\nIP Válido.\nIniciando tentativa de conexão.\nAguarde !!!")
-"""
+
 
 #
 # Inicia Variavel para conectar no Juniper
@@ -124,5 +123,5 @@ for port in myCustomData:
 #
 with open('interfaceext.json', 'w') as f:
     json.dump(data, f, indent = 2)
-    
+
 print(json.dumps(data, indent = 2))

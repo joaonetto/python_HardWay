@@ -16,13 +16,13 @@
             "link_mode": null,
             "speed": "Auto",
             "macAddress": "3c:61:04:67:6c:03",
-            "lastFlapped": "2017-12-22 18:33:18 UTC (1w5d 13:52 ago)"
+            "lastFlapped": "2017-12-22 18:33:18 UTC (1w5d 13:55 ago)"
           },
           "transmission_data": {
-            "rx_bytes": 9715840,
-            "rx_packets": 151810,
-            "tx_bytes": 51255024,
-            "tx_packets": 635191
+            "rx_bytes": 9716992,
+            "rx_packets": 151828,
+            "tx_bytes": 51261316,
+            "tx_packets": 635269
           },
           "error_interface": {
             "rx_err_input": 0,
@@ -55,7 +55,7 @@
             "link_mode": null,
             "speed": "Auto",
             "macAddress": "3c:61:04:67:6c:04",
-            "lastFlapped": "2017-12-22 18:45:53 UTC (1w5d 13:40 ago)"
+            "lastFlapped": "2017-12-22 18:45:53 UTC (1w5d 13:42 ago)"
           },
           "transmission_data": {
             "rx_bytes": 0,
@@ -94,13 +94,13 @@
             "link_mode": null,
             "speed": "Auto",
             "macAddress": "3c:61:04:67:6c:15",
-            "lastFlapped": "2017-12-22 18:45:56 UTC (1w5d 13:40 ago)"
+            "lastFlapped": "2017-12-22 18:45:56 UTC (1w5d 13:42 ago)"
           },
           "transmission_data": {
             "rx_bytes": 0,
             "rx_packets": 0,
-            "tx_bytes": 50441974,
-            "tx_packets": 634222
+            "tx_bytes": 50447806,
+            "tx_packets": 634298
           },
           "error_interface": {
             "rx_err_input": 0,
@@ -133,13 +133,13 @@
             "link_mode": null,
             "speed": "Auto",
             "macAddress": "3c:61:04:67:6c:27",
-            "lastFlapped": "2017-12-22 18:45:49 UTC (1w5d 13:40 ago)"
+            "lastFlapped": "2017-12-22 18:45:49 UTC (1w5d 13:42 ago)"
           },
           "transmission_data": {
             "rx_bytes": 0,
             "rx_packets": 0,
-            "tx_bytes": 23231240,
-            "tx_packets": 192446
+            "tx_bytes": 23234106,
+            "tx_packets": 192470
           },
           "error_interface": {
             "rx_err_input": 0,
@@ -172,13 +172,13 @@
             "link_mode": null,
             "speed": "1000mbps",
             "macAddress": "3c:61:04:67:6c:03",
-            "lastFlapped": "2017-12-22 18:51:50 UTC (1w5d 13:34 ago)"
+            "lastFlapped": "2017-12-22 18:51:50 UTC (1w5d 13:36 ago)"
           },
           "transmission_data": {
-            "rx_bytes": 193280707,
-            "rx_packets": 1784350,
-            "tx_bytes": 592729667,
-            "tx_packets": 1174826
+            "rx_bytes": 193303427,
+            "rx_packets": 1784565,
+            "tx_bytes": 592739074,
+            "tx_packets": 1174932
           },
           "error_interface": {
             "rx_err_input": 0,
@@ -211,13 +211,13 @@
             "link_mode": null,
             "speed": "1000mbps",
             "macAddress": "3c:61:04:67:6c:04",
-            "lastFlapped": "2017-12-22 18:48:36 UTC (1w5d 13:37 ago)"
+            "lastFlapped": "2017-12-22 18:48:36 UTC (1w5d 13:39 ago)"
           },
           "transmission_data": {
-            "rx_bytes": 668710079,
-            "rx_packets": 1500084,
-            "tx_bytes": 40100328,
-            "tx_packets": 293798
+            "rx_bytes": 668728429,
+            "rx_packets": 1500226,
+            "tx_bytes": 40104121,
+            "tx_packets": 293826
           },
           "error_interface": {
             "rx_err_input": 0,
@@ -250,13 +250,13 @@
             "link_mode": null,
             "speed": "1000mbps",
             "macAddress": "3c:61:04:67:6c:03",
-            "lastFlapped": "2017-12-22 18:52:21 UTC (1w5d 13:33 ago)"
+            "lastFlapped": "2017-12-22 18:52:21 UTC (1w5d 13:36 ago)"
           },
           "transmission_data": {
-            "rx_bytes": 169218457,
-            "rx_packets": 1150504,
-            "tx_bytes": 24202722,
-            "tx_packets": 113169
+            "rx_bytes": 169235737,
+            "rx_packets": 1150639,
+            "tx_bytes": 24205427,
+            "tx_packets": 113179
           },
           "error_interface": {
             "rx_err_input": 0,
@@ -289,13 +289,13 @@
             "link_mode": null,
             "speed": "1000mbps",
             "macAddress": "3c:61:04:67:6c:04",
-            "lastFlapped": "2017-12-22 18:49:09 UTC (1w5d 13:37 ago)"
+            "lastFlapped": "2017-12-22 18:49:09 UTC (1w5d 13:39 ago)"
           },
           "transmission_data": {
-            "rx_bytes": 147104984,
-            "rx_packets": 1146895,
-            "tx_bytes": 124875171,
-            "tx_packets": 1289700
+            "rx_bytes": 147122392,
+            "rx_packets": 1147031,
+            "tx_bytes": 124887732,
+            "tx_packets": 1289860
           },
           "error_interface": {
             "rx_err_input": 0,
@@ -328,13 +328,13 @@
             "link_mode": null,
             "speed": "Auto",
             "macAddress": "3c:61:04:67:6c:31",
-            "lastFlapped": "2017-12-22 18:52:18 UTC (1w5d 13:33 ago)"
+            "lastFlapped": "2017-12-22 18:52:18 UTC (1w5d 13:36 ago)"
           },
           "transmission_data": {
             "rx_bytes": 0,
             "rx_packets": 0,
-            "tx_bytes": 50620030,
-            "tx_packets": 634920
+            "tx_bytes": 50625874,
+            "tx_packets": 634996
           },
           "error_interface": {
             "rx_err_input": 0,
