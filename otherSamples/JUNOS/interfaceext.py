@@ -121,7 +121,7 @@ for port in myCustomData:
 #
 # Caso deseje salver em arquivo o resultado
 #
-with open('interfaceext.json', 'w') as f:
-    json.dump(data, f, indent = 2)
+#with open('interfaceext.json', 'w') as f:
+#    json.dump(data, f, indent = 2)
 
 print(json.dumps(data, indent = 2))
