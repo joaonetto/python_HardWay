@@ -1,0 +1,17 @@
+{
+  "hardware": {
+    "CU0213394777": {
+      "type": {
+        "hostname": "ACT-SW-03-CPS",
+        "modelo_hw": "EX2200-48T-4G",
+        "class_hw": "Ethernet Switch",
+        "version_sw": "12.3R12-S7"
+      },
+      "time_collected": {
+        "epoch": "1521727106.9121714",
+        "tz_info": "America/Sao_Paulo"
+      },
+      "interface_name": {}
+    }
+  }
+}

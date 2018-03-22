@@ -13,11 +13,10 @@ customPhyPortView:
     ts: traffic-statistics
     rxerrs: input-error-list
     txerrs: output-error-list
-    ethauto: ethernet-autonegotiation
 
   fields:
-    oper: oper-status
-    admin: admin-status
+    oper : oper-status
+    admin : admin-status
     description: description
     mtu: { mtu : int }
     link_mode: link-mode
@@ -53,9 +52,3 @@ customPhyPortView:
     tx_err_hs_crc: { hs-link-crc-errors: int }
     tx_err_fifo: { output-fifo-errors: int }
     tx_err_resource: { output-resource-errors: int }
-
-  fields_ethauto:
-    eth_auto_status: autonegotiation-status
-    eth_auto_duplexity: link-partner-duplexity
-    eth_auto_speed: link-partner-speed
-    eth_auto_fcontrol: flow-control

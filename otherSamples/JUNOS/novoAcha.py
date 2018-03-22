@@ -189,17 +189,7 @@ except ValueError:
 # Informa que o IP foi aceito e que o script terá continuidade
 #
 print("\nIP Válido.\nIniciando tentativa de conexão.\nAguarde !!!")
-"""
-print(f"Device-IP: {device_ip}")
-print(f"SNMP_HOST: {SNMP_HOST}")
-if str(device_ip) == SNMP_HOST:
-    print("Iguais")
-else:
-    print("Diferentes")
-    print(f"Device-IP: {type(device_ip)}")
-    print(f"SNMP_HOST: {type(SNMP_HOST)}")
-sys.exit(1)
-"""
+
 #
 # Inicia Variavel para conectar no Juniper
 #
@@ -273,6 +263,21 @@ while b < len(device_dict):
         device_dict[b][3]
     )
     b += 1
+
+#
+# Dar uma olhada para melhorar a posição
+#
+"""
+In [8]: print('{:^30}'.format('center'))
+            center
+
+In [9]: print('{:<30}'.format('center'))
+center
+
+In [10]: print('{:>30}'.format('center'))
+                        center
+"""
+
 
 localtime = time.asctime(time.localtime(time.time()))
 print(f"A hora agora é: {localtime}")

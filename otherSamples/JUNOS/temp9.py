@@ -4,7 +4,6 @@ import ipaddress
 import json
 import yaml
 import xml.etree.ElementTree as ET
-from lxml import etree
 from pprint import pprint as pp
 from jnpr.junos import Device
 from jnpr.junos.exception import ConnectError
@@ -14,6 +13,11 @@ from jnpr.junos.exception import ConnectError
 from jnpr.junos.factory.factory_loader import FactoryLoader
 
 data = '2017-12-22 16:52:18 BRST'
+dataxml = """
+
+"""
+
+#getTZ = 'America/Sao_Paulo'
 
 os.system('clear')
 
@@ -29,14 +33,4 @@ except ConnectError as err:
     sys.exit(1)
 
 getTZ = junosDev.rpc.get_config(filter_xml='system/time-zone')
-try:
-    getTZ[0][0]
-except IndexError:
-    getTZ = 'utc'
-else:
-    getTZ = getTZ[0][0].text
-
-
-#print(etree.tostring(getTZ, encoding='unicode'))
-
-#getTZ = str(getTZ[0][0].text)
+getTZ = str(getTZ[0][0].text)

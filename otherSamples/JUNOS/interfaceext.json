@@ -6,6 +6,10 @@
         "modelo_hw": "EX2200-48T-4G",
         "version_sw": "12.3R12-S7"
       },
+      "time_collected": {
+        "epoch": "1521642590.4952428",
+        "tz_info": "America/Sao_Paulo"
+      },
       "interface_name": {
         "ge-0/0/0": {
           "port_info": {
@@ -16,13 +20,13 @@
             "link_mode": null,
             "speed": "Auto",
             "macAddress": "3c:61:04:67:6c:03",
-            "lastFlapped": "2017-12-22 18:33:18 UTC (1w5d 13:55 ago)"
+            "lastFlapped": 1513967598.0
           },
           "transmission_data": {
-            "rx_bytes": 9716992,
-            "rx_packets": 151828,
-            "tx_bytes": 51261316,
-            "tx_packets": 635269
+            "rx_bytes": 205037,
+            "rx_packets": 1897,
+            "tx_bytes": 479770,
+            "tx_packets": 5394
           },
           "error_interface": {
             "rx_err_input": 0,
@@ -35,7 +39,7 @@
             "rx_err_l3_incompletes": 0,
             "rx_err_fifo": 0,
             "rx_err_resource": 0,
-            "tx_err_carrier_transitions": 33,
+            "tx_err_carrier_transitions": 0,
             "tx_err_output": 0,
             "tx_err_collisions": 0,
             "tx_err_drops": 0,
@@ -44,6 +48,12 @@
             "tx_err_hs-crc": 0,
             "tx_err_fifo": 0,
             "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "complete",
+            "eth_auto_duplexity": "full-duplex",
+            "eth_auto_speed": "1000",
+            "eth_auto_fcontrol": "None"
           }
         },
         "ge-0/0/1": {
@@ -55,7 +65,7 @@
             "link_mode": null,
             "speed": "Auto",
             "macAddress": "3c:61:04:67:6c:04",
-            "lastFlapped": "2017-12-22 18:45:53 UTC (1w5d 13:42 ago)"
+            "lastFlapped": 1513968353.0
           },
           "transmission_data": {
             "rx_bytes": 0,
@@ -83,6 +93,732 @@
             "tx_err_hs-crc": 0,
             "tx_err_fifo": 0,
             "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "complete",
+            "eth_auto_duplexity": "full-duplex",
+            "eth_auto_speed": "1000",
+            "eth_auto_fcontrol": "Symmetric/Asymmetric"
+          }
+        },
+        "ge-0/0/2": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:05",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/3": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:06",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/4": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "down",
+            "description": "Interface Disable",
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:07",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/5": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "1000",
+            "macAddress": "3c:61:04:67:6c:0a",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/6": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "1000",
+            "macAddress": "3c:61:04:67:6c:0a",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/7": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "1000",
+            "macAddress": "3c:61:04:67:6c:0a",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/8": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "100",
+            "macAddress": "3c:61:04:67:6c:0b",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/9": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "100",
+            "macAddress": "3c:61:04:67:6c:0c",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/10": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "1000",
+            "macAddress": "3c:61:04:67:6c:09",
+            "lastFlapped": 1513930325.0
+          },
+          "transmission_data": {
+            "rx_bytes": 1171840,
+            "rx_packets": 9165,
+            "tx_bytes": 1254544,
+            "tx_packets": 9295
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 2,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/11": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "1000",
+            "macAddress": "3c:61:04:67:6c:09",
+            "lastFlapped": 1513930324.0
+          },
+          "transmission_data": {
+            "rx_bytes": 1170304,
+            "rx_packets": 9144,
+            "tx_bytes": 1556832,
+            "tx_packets": 14013
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 2,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/12": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Conexao com o Alteon 5224_1 vlan Clientes",
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:0f",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/13": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:10",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/14": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:11",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/15": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:12",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/16": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Teste QoS Raizen - JNetto - Trunk",
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:13",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/17": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Teste QoS Raizen - JNetto - Telefone/PC",
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:14",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
           }
         },
         "ge-0/0/18": {
@@ -94,13 +830,13 @@
             "link_mode": null,
             "speed": "Auto",
             "macAddress": "3c:61:04:67:6c:15",
-            "lastFlapped": "2017-12-22 18:45:56 UTC (1w5d 13:42 ago)"
+            "lastFlapped": 1513968356.0
           },
           "transmission_data": {
             "rx_bytes": 0,
             "rx_packets": 0,
-            "tx_bytes": 50447806,
-            "tx_packets": 634298
+            "tx_bytes": 62206566,
+            "tx_packets": 782137
           },
           "error_interface": {
             "rx_err_input": 0,
@@ -122,6 +858,777 @@
             "tx_err_hs-crc": 0,
             "tx_err_fifo": 0,
             "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "complete",
+            "eth_auto_duplexity": "full-duplex",
+            "eth_auto_speed": "1000",
+            "eth_auto_fcontrol": "Symmetric/Asymmetric"
+          }
+        },
+        "ge-0/0/19": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:16",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/20": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:17",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/21": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": null,
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:18",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/22": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Conexao com Alteon 5224_1 vlan Servidores",
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:19",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/23": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Conexao com Alteon 5224_2 vlan Servidores",
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:1a",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/24": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Interface de Teste com MX-80 e PBR Raizen",
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:1b",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/25": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Interface de Teste com MX-80 - Suporte UPX - Flexible",
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:1c",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/26": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Servidor: hostR2C1 - MAC: 00:1E:0B:5C:67:E9",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:1d",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/27": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Servidor: hostR2C2 - MAC: 00:1E:0B:77:BE:9E",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:1e",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/28": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Servidor: HP - G7 - Ajustar dados",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:1f",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/29": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Servidor: hostR2C4 - MAC: 44:A8:42:20:5D:5C",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:20",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/30": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Servidor: hostR3C1 - MAC: 00:1E:0B:CB:77:18",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:21",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/31": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Servidor: hostR3C2 - MAC: 00:1E:0B:CB:77:54",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:22",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/32": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Servidor: hostR3C3 - MAC: 00:1F:29:55:94:38",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:23",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/33": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Servidor: hostR3C4 - MAC: 00:1F:29:55:8A:82",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:24",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/34": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Servidor: hostR3C5 - MAC: 00:1E:0B:CB:AD:64",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:25",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/35": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Servidor: hostR3C6 - MAC: 00:1E:0B:CB:77:2A",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:26",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
           }
         },
         "ge-0/0/36": {
@@ -133,13 +1640,13 @@
             "link_mode": null,
             "speed": "Auto",
             "macAddress": "3c:61:04:67:6c:27",
-            "lastFlapped": "2017-12-22 18:45:49 UTC (1w5d 13:42 ago)"
+            "lastFlapped": 1513968349.0
           },
           "transmission_data": {
             "rx_bytes": 0,
             "rx_packets": 0,
-            "tx_bytes": 23234106,
-            "tx_packets": 192470
+            "tx_bytes": 28629890,
+            "tx_packets": 237328
           },
           "error_interface": {
             "rx_err_input": 0,
@@ -161,6 +1668,237 @@
             "tx_err_hs-crc": 0,
             "tx_err_fifo": 0,
             "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "complete",
+            "eth_auto_duplexity": "full-duplex",
+            "eth_auto_speed": "1000",
+            "eth_auto_fcontrol": "Symmetric/Asymmetric"
+          }
+        },
+        "ge-0/0/37": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Conexao MX-80 - Interface: ge-1/1/0",
+            "mtu": 9216,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:28",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/38": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Conexao Alteon 5224 - Interface: 19",
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:29",
+            "lastFlapped": 1513931881.0
+          },
+          "transmission_data": {
+            "rx_bytes": 358224,
+            "rx_packets": 5268,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 2,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/39": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "up",
+            "description": "Conexao Alteon 5224 - Interface: 20",
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:2a",
+            "lastFlapped": 1513931884.0
+          },
+          "transmission_data": {
+            "rx_bytes": 358360,
+            "rx_packets": 5270,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 2,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/40": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "down",
+            "description": "Interface Disable",
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:2b",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
+          }
+        },
+        "ge-0/0/41": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "down",
+            "description": "Interface Disable",
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:2c",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
           }
         },
         "ge-0/0/42": {
@@ -170,15 +1908,15 @@
             "description": "Conexao com ACT-VM-01-CPS - Interface vmnic1",
             "mtu": 9216,
             "link_mode": null,
-            "speed": "1000mbps",
+            "speed": "1000",
             "macAddress": "3c:61:04:67:6c:03",
-            "lastFlapped": "2017-12-22 18:51:50 UTC (1w5d 13:36 ago)"
+            "lastFlapped": 1513968710.0
           },
           "transmission_data": {
-            "rx_bytes": 193303427,
-            "rx_packets": 1784565,
-            "tx_bytes": 592739074,
-            "tx_packets": 1174932
+            "rx_bytes": 237870991,
+            "rx_packets": 2207953,
+            "tx_bytes": 609777853,
+            "tx_packets": 1372347
           },
           "error_interface": {
             "rx_err_input": 0,
@@ -200,6 +1938,12 @@
             "tx_err_hs-crc": 0,
             "tx_err_fifo": 0,
             "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "complete",
+            "eth_auto_duplexity": "full-duplex",
+            "eth_auto_speed": "1000",
+            "eth_auto_fcontrol": "Symmetric"
           }
         },
         "ge-0/0/43": {
@@ -209,15 +1953,15 @@
             "description": "Conexao com ACT-VM-02-CPS - Interface vmnic1",
             "mtu": 9216,
             "link_mode": null,
-            "speed": "1000mbps",
+            "speed": "1000",
             "macAddress": "3c:61:04:67:6c:04",
-            "lastFlapped": "2017-12-22 18:48:36 UTC (1w5d 13:39 ago)"
+            "lastFlapped": 1513968516.0
           },
           "transmission_data": {
-            "rx_bytes": 668728429,
-            "rx_packets": 1500226,
-            "tx_bytes": 40104121,
-            "tx_packets": 293826
+            "rx_bytes": 710577129,
+            "rx_packets": 1790526,
+            "tx_bytes": 82603475,
+            "tx_packets": 372368
           },
           "error_interface": {
             "rx_err_input": 0,
@@ -239,6 +1983,12 @@
             "tx_err_hs-crc": 0,
             "tx_err_fifo": 0,
             "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "complete",
+            "eth_auto_duplexity": "full-duplex",
+            "eth_auto_speed": "1000",
+            "eth_auto_fcontrol": "Symmetric"
           }
         },
         "ge-0/0/44": {
@@ -248,15 +1998,15 @@
             "description": "Conexao com ACT-VM-01-CPS - Interface vmnic2",
             "mtu": 9216,
             "link_mode": null,
-            "speed": "1000mbps",
+            "speed": "1000",
             "macAddress": "3c:61:04:67:6c:03",
-            "lastFlapped": "2017-12-22 18:52:21 UTC (1w5d 13:36 ago)"
+            "lastFlapped": 1513968741.0
           },
           "transmission_data": {
-            "rx_bytes": 169235737,
-            "rx_packets": 1150639,
-            "tx_bytes": 24205427,
-            "tx_packets": 113179
+            "rx_bytes": 202893721,
+            "rx_packets": 1413592,
+            "tx_bytes": 29245043,
+            "tx_packets": 131442
           },
           "error_interface": {
             "rx_err_input": 0,
@@ -278,6 +2028,12 @@
             "tx_err_hs-crc": 0,
             "tx_err_fifo": 0,
             "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "complete",
+            "eth_auto_duplexity": "full-duplex",
+            "eth_auto_speed": "1000",
+            "eth_auto_fcontrol": "Symmetric/Asymmetric"
           }
         },
         "ge-0/0/45": {
@@ -287,15 +2043,15 @@
             "description": "Conexao com ACT-VM-02-CPS - Interface vmnic2",
             "mtu": 9216,
             "link_mode": null,
-            "speed": "1000mbps",
+            "speed": "1000",
             "macAddress": "3c:61:04:67:6c:04",
-            "lastFlapped": "2017-12-22 18:49:09 UTC (1w5d 13:39 ago)"
+            "lastFlapped": 1513968549.0
           },
           "transmission_data": {
-            "rx_bytes": 147122392,
-            "rx_packets": 1147031,
-            "tx_bytes": 124887732,
-            "tx_packets": 1289860
+            "rx_bytes": 182409811,
+            "rx_packets": 1426752,
+            "tx_bytes": 216565223,
+            "tx_packets": 1654789
           },
           "error_interface": {
             "rx_err_input": 0,
@@ -317,6 +2073,12 @@
             "tx_err_hs-crc": 0,
             "tx_err_fifo": 0,
             "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "complete",
+            "eth_auto_duplexity": "full-duplex",
+            "eth_auto_speed": "1000",
+            "eth_auto_fcontrol": "Symmetric/Asymmetric"
           }
         },
         "ge-0/0/46": {
@@ -328,13 +2090,13 @@
             "link_mode": null,
             "speed": "Auto",
             "macAddress": "3c:61:04:67:6c:31",
-            "lastFlapped": "2017-12-22 18:52:18 UTC (1w5d 13:36 ago)"
+            "lastFlapped": 1513968738.0
           },
           "transmission_data": {
             "rx_bytes": 0,
             "rx_packets": 0,
-            "tx_bytes": 50625874,
-            "tx_packets": 634996
+            "tx_bytes": 62410596,
+            "tx_packets": 782834
           },
           "error_interface": {
             "rx_err_input": 0,
@@ -356,6 +2118,57 @@
             "tx_err_hs-crc": 0,
             "tx_err_fifo": 0,
             "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "complete",
+            "eth_auto_duplexity": "full-duplex",
+            "eth_auto_speed": "1000",
+            "eth_auto_fcontrol": "Symmetric/Asymmetric"
+          }
+        },
+        "ge-0/0/47": {
+          "port_info": {
+            "operStatus": "down",
+            "adminStatus": "down",
+            "description": "Interface Disable",
+            "mtu": 1514,
+            "link_mode": null,
+            "speed": "Auto",
+            "macAddress": "3c:61:04:67:6c:32",
+            "lastFlapped": "Never"
+          },
+          "transmission_data": {
+            "rx_bytes": 0,
+            "rx_packets": 0,
+            "tx_bytes": 0,
+            "tx_packets": 0
+          },
+          "error_interface": {
+            "rx_err_input": 0,
+            "rx_err_drops": 0,
+            "rx_err_frame": 0,
+            "rx_err_runts": 0,
+            "rx_err_discards": 0,
+            "rx_err_l2_channel": 0,
+            "rx_err_l2_mismatch": 0,
+            "rx_err_l3_incompletes": 0,
+            "rx_err_fifo": 0,
+            "rx_err_resource": 0,
+            "tx_err_carrier_transitions": 0,
+            "tx_err_output": 0,
+            "tx_err_collisions": 0,
+            "tx_err_drops": 0,
+            "tx_err_aged": 0,
+            "tx_err_mtu": 0,
+            "tx_err_hs-crc": 0,
+            "tx_err_fifo": 0,
+            "tx_err_resource": 0
+          },
+          "autonegotiation": {
+            "eth_auto_status": "incomplete",
+            "eth_auto_duplexity": null,
+            "eth_auto_speed": null,
+            "eth_auto_fcontrol": null
           }
         }
       }

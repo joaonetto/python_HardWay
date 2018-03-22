@@ -1,0 +1,386 @@
+root@ACT-SW-03-CPS> show interfaces ge-0/0/0 extensive
+Physical interface: ge-0/0/0, Enabled, Physical link is Up
+  Interface index: 137, SNMP ifIndex: 501, Generation: 140
+  Description: Interface de UpLink - Firewall Juniper SRX 240 - ge-0/0/15
+  Link-level type: Ethernet, MTU: 9216, Speed: Auto, Duplex: Auto, BPDU Error: None,
+  MAC-REWRITE Error: None, Loopback: Disabled, Source filtering: Disabled, Flow control: Enabled,
+  Auto-negotiation: Enabled, Remote fault: Online, Media type: Copper
+  Device flags   : Present Running
+  Interface flags: SNMP-Traps Internal: 0x4000
+  Link flags     : None
+  CoS queues     : 8 supported, 8 maximum usable queues
+  Hold-times     : Up 0 ms, Down 0 ms
+  Current address: 3c:61:04:67:6c:03, Hardware address: 3c:61:04:67:6c:03
+  Last flapped   : 2017-12-22 18:33:18 UTC (1w6d 12:19 ago)
+  Statistics last cleared: Never
+  Traffic statistics:
+   Input  bytes  :             10410368                  504 bps
+   Output bytes  :             54917548                  504 bps
+   Input  packets:               162662                    0 pps
+   Output packets:               680592                    0 pps
+   IPv6 transit statistics:
+    Input  bytes  :                   0
+    Output bytes  :                   0
+    Input  packets:                   0
+    Output packets:                   0
+  Input errors:
+    Errors: 0, Drops: 0, Framing errors: 0, Runts: 0, Policed discards: 0, L3 incompletes: 0,
+    L2 channel errors: 0, L2 mismatch timeouts: 0, FIFO errors: 0, Resource errors: 0
+  Output errors:
+    Carrier transitions: 33, Errors: 0, Drops: 0, Collisions: 0, Aged packets: 0, FIFO errors: 0,
+    HS link CRC errors: 0, MTU errors: 0, Resource errors: 0
+  Egress queues: 8 supported, 4 in use
+  Queue counters:       Queued packets  Transmitted packets      Dropped packets
+    0 best-effort                    0                    0                    0
+    1 assured-forw                   0                    0                    0
+    5 expedited-fo                   0                    0                    0
+    7 network-cont                   0               680592                    0
+  Queue number:         Mapped forwarding classes
+    0                   best-effort
+    1                   assured-forwarding
+    5                   expedited-forwarding
+    7                   network-control
+  Active alarms  : None
+  Active defects : None
+  MAC statistics:                      Receive         Transmit
+    Total octets                      10410368         54917548
+    Total packets                       162662           680592
+    Unicast packets                          0                0
+    Broadcast packets                   162662                0
+    Multicast packets                        0           680592
+    CRC/Align errors                         0                0
+    FIFO errors                              0                0
+    MAC control frames                       0                0
+    MAC pause frames                         0                0
+    Oversized frames                         0
+    Jabber frames                            0
+    Fragment frames                          0
+    Code violations                          0
+  Autonegotiation information:
+    Negotiation status: Complete
+    Link partner:
+        Link mode: Full-duplex, Flow control: None, Remote fault: OK, Link partner Speed: 1000 Mbps
+    Local resolution:
+        Flow control: Symmetric, Remote fault: Link OK
+  Packet Forwarding Engine configuration:
+    Destination slot: 0 (0x00)
+  CoS information:
+    Direction : Output
+    CoS transmit queue               Bandwidth               Buffer Priority   Limit
+                              %            bps     %           usec
+    0 best-effort            83      830000000    83             NA      low    none
+    1 assured-forwarding      2       20000000     5             NA      low    none
+    5 expedited-forwarding   10      100000000     5             NA      low    none
+    7 network-control         5       50000000     5             NA      low    none
+  Interface transmit statistics: Disabled
+
+  Logical interface ge-0/0/0.0 (Index 86) (SNMP ifIndex 502) (Generation 151)
+    Flags: Up SNMP-Traps 0x40004000 Encapsulation: ENET2
+    Traffic statistics:
+     Input  bytes  :                    0
+     Output bytes  :             82127909
+     Input  packets:                    0
+     Output packets:               680593
+    Local statistics:
+     Input  bytes  :                    0
+     Output bytes  :             82127909
+     Input  packets:                    0
+     Output packets:               680593
+    Transit statistics:
+     Input  bytes  :                    0                    0 bps
+     Output bytes  :                    0                    0 bps
+     Input  packets:                    0                    0 pps
+     Output packets:                    0                    0 pps
+    Protocol eth-switch, Generation: 174, Route table: 0
+      Flags: Trunk-Mode
+
+{master:0}
+root@ACT-SW-03-CPS> show interfaces ge-0/0/0 extensive | display xml
+<rpc-reply xmlns:junos="http://xml.juniper.net/junos/12.3R12/junos">
+    <interface-information xmlns="http://xml.juniper.net/junos/12.3R12/junos-interface" junos:style="normal">
+        <physical-interface>
+            <name>ge-0/0/0</name>
+            <admin-status junos:format="Enabled">up</admin-status>
+            <oper-status>up</oper-status>
+            <local-index>137</local-index>
+            <snmp-index>501</snmp-index>
+            <generation>140</generation>
+            <description>Interface de UpLink - Firewall Juniper SRX 240 - ge-0/0/15</description>
+            <link-level-type>Ethernet</link-level-type>
+            <mtu>9216</mtu>
+            <source-filtering>disabled</source-filtering>
+            <speed>Auto</speed>
+            <duplex>Auto</duplex>
+            <bpdu-error>none</bpdu-error>
+            <l2pt-error>none</l2pt-error>
+            <loopback>disabled</loopback>
+            <if-flow-control>enabled</if-flow-control>
+            <if-auto-negotiation>enabled</if-auto-negotiation>
+            <if-remote-fault>online</if-remote-fault>
+            <if-media-type>Copper</if-media-type>
+
+            <if-device-flags>
+                <ifdf-present/>
+                <ifdf-running/>
+            </if-device-flags>
+            <if-config-flags>
+                <iff-snmp-traps/>
+                <internal-flags>0x4000</internal-flags>
+            </if-config-flags>
+            <if-media-flags>
+                <ifmf-none/>
+            </if-media-flags>
+            <physical-interface-cos-information>
+                <physical-interface-cos-hw-max-queues>8</physical-interface-cos-hw-max-queues>
+                <physical-interface-cos-use-max-queues>8</physical-interface-cos-use-max-queues>
+            </physical-interface-cos-information>
+            <up-hold-time>0</up-hold-time>
+            <down-hold-time>0</down-hold-time>
+            <current-physical-address>3c:61:04:67:6c:03</current-physical-address>
+            <hardware-physical-address>3c:61:04:67:6c:03</hardware-physical-address>
+            <interface-flapped junos:seconds="1167684">2017-12-22 18:33:18 UTC (1w6d 12:21 ago)</interface-flapped>
+            <statistics-cleared>Never</statistics-cleared>
+            <traffic-statistics junos:style="verbose">
+                <input-bytes>10411200</input-bytes>
+                <input-bps>512</input-bps>
+                <output-bytes>54921916</output-bytes>
+                <output-bps>512</output-bps>
+                <input-packets>162675</input-packets>
+                <input-pps>1</input-pps>
+                <output-packets>680644</output-packets>
+                <output-pps>1</output-pps>
+                <ipv6-transit-statistics>
+                    <input-bytes>0</input-bytes>
+                    <output-bytes>0</output-bytes>
+                    <input-packets>0</input-packets>
+                    <output-packets>0</output-packets>
+                </ipv6-transit-statistics>
+            </traffic-statistics>
+            <input-error-list>
+                <input-errors>0</input-errors>
+                <input-drops>0</input-drops>
+                <framing-errors>0</framing-errors>
+                <input-runts>0</input-runts>
+                <input-discards>0</input-discards>
+                <input-l3-incompletes>0</input-l3-incompletes>
+                <input-l2-channel-errors>0</input-l2-channel-errors>
+                <input-l2-mismatch-timeouts>0</input-l2-mismatch-timeouts>
+                <input-fifo-errors>0</input-fifo-errors>
+                <input-resource-errors>0</input-resource-errors>
+            </input-error-list>
+            <output-error-list>
+                <carrier-transitions>33</carrier-transitions>
+                <output-errors>0</output-errors>
+                <output-collisions>0</output-collisions>
+                <output-drops>0</output-drops>
+                <aged-packets>0</aged-packets>
+                <mtu-errors>0</mtu-errors>
+                <hs-link-crc-errors>0</hs-link-crc-errors>
+                <output-fifo-errors>0</output-fifo-errors>
+                <output-resource-errors>0</output-resource-errors>
+            </output-error-list>
+            <queue-counters junos:style="brief">
+                <interface-cos-short-summary>
+                    <intf-cos-queue-type>Egress queues</intf-cos-queue-type>
+                    <intf-cos-num-queues-supported>8</intf-cos-num-queues-supported>
+                    <intf-cos-num-queues-in-use>4</intf-cos-num-queues-in-use>
+                </interface-cos-short-summary>
+                <queue>
+                    <queue-number>0</queue-number>
+                    <forwarding-class-name>best-effort</forwarding-class-name>
+                    <queue-counters-queued-packets>0</queue-counters-queued-packets>
+                    <queue-counters-trans-packets>0</queue-counters-trans-packets>
+                    <queue-counters-total-drop-packets>0</queue-counters-total-drop-packets>
+                </queue>
+                <queue>
+                    <queue-number>1</queue-number>
+                    <forwarding-class-name>assured-forwarding</forwarding-class-name>
+                    <queue-counters-queued-packets>0</queue-counters-queued-packets>
+                    <queue-counters-trans-packets>0</queue-counters-trans-packets>
+                    <queue-counters-total-drop-packets>0</queue-counters-total-drop-packets>
+                </queue>
+                <queue>
+                    <queue-number>5</queue-number>
+                    <forwarding-class-name>expedited-forwarding</forwarding-class-name>
+                    <queue-counters-queued-packets>0</queue-counters-queued-packets>
+                    <queue-counters-trans-packets>0</queue-counters-trans-packets>
+                    <queue-counters-total-drop-packets>0</queue-counters-total-drop-packets>
+                </queue>
+                <queue>
+                    <queue-number>7</queue-number>
+                    <forwarding-class-name>network-control</forwarding-class-name>
+                    <queue-counters-queued-packets>0</queue-counters-queued-packets>
+                    <queue-counters-trans-packets>680644</queue-counters-trans-packets>
+                    <queue-counters-total-drop-packets>0</queue-counters-total-drop-packets>
+                </queue>
+            </queue-counters>
+            <queue-num-forwarding-class-name-map>
+                <queue-number>0</queue-number>
+                <forwarding-class-name>best-effort</forwarding-class-name>
+            </queue-num-forwarding-class-name-map>
+            <queue-num-forwarding-class-name-map>
+                <queue-number>1</queue-number>
+                <forwarding-class-name>assured-forwarding</forwarding-class-name>
+            </queue-num-forwarding-class-name-map>
+            <queue-num-forwarding-class-name-map>
+                <queue-number>5</queue-number>
+                <forwarding-class-name>expedited-forwarding</forwarding-class-name>
+            </queue-num-forwarding-class-name-map>
+            <queue-num-forwarding-class-name-map>
+                <queue-number>7</queue-number>
+                <forwarding-class-name>network-control</forwarding-class-name>
+            </queue-num-forwarding-class-name-map>
+            <active-alarms>
+                <interface-alarms>
+                    <alarm-not-present/>
+                </interface-alarms>
+            </active-alarms>
+            <active-defects>
+                <interface-alarms>
+                    <alarm-not-present/>
+                </interface-alarms>
+            </active-defects>
+            <ethernet-mac-statistics junos:style="verbose">
+                <input-bytes>10411200</input-bytes>
+                <output-bytes>54921916</output-bytes>
+                <input-packets>162675</input-packets>
+                <output-packets>680644</output-packets>
+                <input-unicasts>0</input-unicasts>
+                <output-unicasts>0</output-unicasts>
+                <input-broadcasts>162675</input-broadcasts>
+                <output-broadcasts>0</output-broadcasts>
+                <input-multicasts>0</input-multicasts>
+                <output-multicasts>680644</output-multicasts>
+                <input-crc-errors>0</input-crc-errors>
+                <output-crc-errors>0</output-crc-errors>
+                <input-fifo-errors>0</input-fifo-errors>
+                <output-fifo-errors>0</output-fifo-errors>
+                <input-mac-control-frames>0</input-mac-control-frames>
+                <output-mac-control-frames>0</output-mac-control-frames>
+                <input-mac-pause-frames>0</input-mac-pause-frames>
+                <output-mac-pause-frames>0</output-mac-pause-frames>
+                <input-oversized-frames>0</input-oversized-frames>
+                <input-jabber-frames>0</input-jabber-frames>
+                <input-fragment-frames>0</input-fragment-frames>
+                <input-code-violations>0</input-code-violations>
+            </ethernet-mac-statistics>
+            <ethernet-autonegotiation>
+                <autonegotiation-status>complete</autonegotiation-status>
+                <link-partner-status>OK</link-partner-status>
+                <link-partner-duplexity>full-duplex</link-partner-duplexity>
+                <link-partner-speed>1000 Mbps</link-partner-speed>
+                <flow-control>None</flow-control>
+                <local-info>
+                    <local-flow-control>Symmetric</local-flow-control>
+                    <local-remote-fault>Link OK</local-remote-fault>
+                </local-info>
+            </ethernet-autonegotiation>
+            <pfe-information>
+                <destination-slot>0</destination-slot>
+                <destination-mask>0x00</destination-mask>
+            </pfe-information>
+            <cos-header/>
+            <cos-information>
+                <cos-stream-information>
+                    <cos-direction>Output</cos-direction>
+                    <cos-queue-configuration>
+                        <cos-queue-number>0</cos-queue-number>
+                        <cos-queue-forwarding-class>best-effort</cos-queue-forwarding-class>
+                        <cos-queue-bandwidth>83</cos-queue-bandwidth>
+                        <cos-queue-bandwidth-bps>830000000</cos-queue-bandwidth-bps>
+                        <cos-queue-buffer>83</cos-queue-buffer>
+                        <cos-queue-buffer-bytes>NA</cos-queue-buffer-bytes>
+                        <cos-queue-priority>low</cos-queue-priority>
+                        <cos-queue-limit>none</cos-queue-limit>
+                    </cos-queue-configuration>
+                    <cos-queue-configuration>
+                        <cos-queue-number>1</cos-queue-number>
+                        <cos-queue-forwarding-class>assured-forwarding</cos-queue-forwarding-class>
+                        <cos-queue-bandwidth>2</cos-queue-bandwidth>
+                        <cos-queue-bandwidth-bps>20000000</cos-queue-bandwidth-bps>
+                        <cos-queue-buffer>5</cos-queue-buffer>
+                        <cos-queue-buffer-bytes>NA</cos-queue-buffer-bytes>
+                        <cos-queue-priority>low</cos-queue-priority>
+                        <cos-queue-limit>none</cos-queue-limit>
+                    </cos-queue-configuration>
+                    <cos-queue-configuration>
+                        <cos-queue-number>5</cos-queue-number>
+                        <cos-queue-forwarding-class>expedited-forwarding</cos-queue-forwarding-class>
+                        <cos-queue-bandwidth>10</cos-queue-bandwidth>
+                        <cos-queue-bandwidth-bps>100000000</cos-queue-bandwidth-bps>
+                        <cos-queue-buffer>5</cos-queue-buffer>
+                        <cos-queue-buffer-bytes>NA</cos-queue-buffer-bytes>
+                        <cos-queue-priority>low</cos-queue-priority>
+                        <cos-queue-limit>none</cos-queue-limit>
+                    </cos-queue-configuration>
+                    <cos-queue-configuration>
+                        <cos-queue-number>7</cos-queue-number>
+                        <cos-queue-forwarding-class>network-control</cos-queue-forwarding-class>
+                        <cos-queue-bandwidth>5</cos-queue-bandwidth>
+                        <cos-queue-bandwidth-bps>50000000</cos-queue-bandwidth-bps>
+                        <cos-queue-buffer>5</cos-queue-buffer>
+                        <cos-queue-buffer-bytes>NA</cos-queue-buffer-bytes>
+                        <cos-queue-priority>low</cos-queue-priority>
+                        <cos-queue-limit>none</cos-queue-limit>
+                    </cos-queue-configuration>
+                </cos-stream-information>
+            </cos-information>
+            <interface-transmit-statistics>Disabled</interface-transmit-statistics>
+            <logical-interface>
+                <name>ge-0/0/0.0</name>
+                <local-index>86</local-index>
+                <snmp-index>502</snmp-index>
+                <generation>151</generation>
+                <if-config-flags>
+                    <iff-up/>
+                    <iff-snmp-traps/>
+                    <internal-flags>0x40004000</internal-flags>
+                </if-config-flags>
+                <encapsulation>ENET2</encapsulation>
+                <traffic-statistics junos:style="verbose" junos:indent="2" >
+                    <input-bytes>0</input-bytes>
+                    <output-bytes>82134005</output-bytes>
+                    <input-packets>0</input-packets>
+                    <output-packets>680644</output-packets>
+                </traffic-statistics>
+                <local-traffic-statistics>
+                    <input-bytes>0</input-bytes>
+                    <output-bytes>82134005</output-bytes>
+                    <input-packets>0</input-packets>
+                    <output-packets>680644</output-packets>
+                </local-traffic-statistics>
+                <transit-traffic-statistics>
+                    <input-bytes>0</input-bytes>
+                    <input-bps>0</input-bps>
+                    <output-bytes>0</output-bytes>
+                    <output-bps>0</output-bps>
+                    <input-packets>0</input-packets>
+                    <input-pps>0</input-pps>
+                    <output-packets>0</output-packets>
+                    <output-pps>0</output-pps>
+                </transit-traffic-statistics>
+                <filter-information>
+                </filter-information>
+                <address-family>
+                    <address-family-name>eth-switch</address-family-name>
+                    <generation>174</generation>
+                    <route-table>0</route-table>
+                    <address-family-flags>
+                        <ifff-port-mode-trunk/>
+                    </address-family-flags>
+                    <bridge-iff-properties>
+                        <svlan-ethertype>0x0</svlan-ethertype>
+                        <eth-switching-flags>
+                            <eth-switching-flags-value>0x0000000000000010</eth-switching-flags-value>
+                            <no-mac-learning-status>disabled</no-mac-learning-status>
+                            <reflective-relay-status>disabled</reflective-relay-status>
+                        </eth-switching-flags>
+                    </bridge-iff-properties>
+                </address-family>
+            </logical-interface>
+        </physical-interface>
+    </interface-information>
+    <cli>
+        <banner>{master:0}</banner>
+    </cli>
+</rpc-reply>

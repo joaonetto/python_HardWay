@@ -10,6 +10,8 @@ from jnpr.junos import Device
 from jnpr.junos.exception import ConnectError
 from jnpr.junos.factory.factory_loader import FactoryLoader
 
+os.system('clear')
+
 def ajustaFlappedPhy(flappedPhy):
     if 'Never' not in flappedPhy:
         if '(' in flappedPhy:
@@ -50,15 +52,16 @@ def getConfTZ(junosDevice):
         getTZ = getTZ[0][0].text
     return getTZ
 
-def validaIP(ipToAccess):
-    #
-    # Verifica se o IP informado esta com o formato correto de IPv4
-    #
-    try:
-        device_ip = ipaddress.ip_address(ipToAccess)
-    except ValueError:
-        print("\nErro:\n\tO endereço IP informado foi considerado inválido.\n\tPor favor verifique!!")
-        sys.exit(1)
+#device_ip = '10.151.2.251'
+
+#
+# Verifica se o IP informado esta com o formato correto de IPv4
+#
+try:
+    device_ip = ipaddress.ip_address(input('Informe o endereço IP do dispositivo Juniper que deseja se conectar: '))
+except ValueError:
+    print("\nErro:\n\tO endereço IP informado foi considerado inválido.\n\tPor favor verifique!!")
+    sys.exit(1)
 
 #
 # Informa que o IP foi aceito e que o script terá continuidade
@@ -171,12 +174,10 @@ for port in myCustomData:
         }
     )
 
-if __name__ == '__main__':
-    device_ip = validaIP(input('Informe o endereço IP do dispositivo Juniper que deseja se conectar: '))
 #
 # Caso deseje salver em arquivo o resultado
 #
-#with open('interfaceext.json', 'w') as f:
-#    json.dump(data, f, indent = 2)
+with open('interfaceext.json', 'w') as f:
+    json.dump(data, f, indent = 2)
 
-# print(json.dumps(data, indent = 2))
+print(json.dumps(data, indent = 2))
