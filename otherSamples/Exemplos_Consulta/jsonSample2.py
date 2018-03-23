@@ -1,6 +1,6 @@
 import json
 
-with open('states.json') as f:
+with open('jsonSample2.json') as f:
     data = json.load(f)
 
 for state in data['states']:
@@ -9,5 +9,5 @@ for state in data['states']:
 for state in data['states']:
     del state['area_codes']
 
-with open('states_new.json', 'w') as f:
+with open('jsonSample2_save.json', 'w') as f:
     json.dump(data, f, indent = 2)
