@@ -10,8 +10,11 @@ customAEPhyPortTable:
 
 customAEPhyPortView:
   groups:
-    logical: logical-interface
-    phy: logical-interface/lag-traffic-statistics/lag-lacp-info
+    grTrafficStat: traffic-statistics
+    grRXError: input-error-list
+    grTXError: output-error-list
+    grLogicalIf: logical-interface
+    grAELink: logical-interface/lag-traffic-statistics
 
   fields:
     oper: oper-status
@@ -20,12 +23,41 @@ customAEPhyPortView:
     mtu: { mtu : int }
     link_mode: link-mode
     speed: speed
+    bpdu_error: bpdu-error
+    if_fcontrol: if-flow-control
     current_macaddr: current-physical-address
     hardware_macaddr: hardware-physical-address
     flapped: interface-flapped
+    minimum_lk_ae: { minimum-links-in-aggregate : int }
+    minimum_bw_ae: { minimum-bandwidth-in-aggregate : int }
 
-  fields_logical:
-    ae_name: name
+  fields_grTrafficStat:
+    rx_bytes: { input-bytes : int }
+    rx_packets: { input-packets : int }
+    tx_bytes: { output-bytes : int }
+    tx_packets: { output-packets : int }
 
-  fields_phy:
-    interface_phy: name
+  fields_grRXError:
+    rx_err_input: { input-errors : int }
+    rx_err_drops: { input-drops : int }
+    rx_err_frame: { framing-errors : int }
+    rx_err_runts: { input-runts : int }
+    rx_err_giants: { input-giants : int}
+    rx_err_resource: { input-resource-errors: int }
+
+  fields_grTXError:
+    tx_err_carrier_transitions: { carrier-transitions: int }
+    tx_err_output: { output-errors: int }
+    tx_err_drops: { output-drops: int }
+    tx_err_mtu: { mtu-errors: int }
+    tx_err_resource: { output-resource-errors: int }
+
+  fields_grLogicalIf:
+    logical_name: name
+
+  fields_grAELink:
+    ae_link: lag-link/name
+    lacp_statistics_if: lag-lacp-statistics/name
+    lacp_rx_packets: {lag-lacp-statistics/lacp-rx-packets : int}
+    unknown_rx_packets: {lag-lacp-statistics/unknown-rx-packets : int}
+    illegal_rx_packets: {lag-lacp-statistics/illegal-rx-packets : int}

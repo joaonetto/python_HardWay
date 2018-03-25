@@ -1,0 +1,17 @@
+---
+customVLAN:
+  rpc: get-vlan-information
+  item: vlan
+  key: vlan-tag
+  view: customVLANView
+
+customVLANView:
+  groups:
+    phy: vlan-detail/vlan-member-list
+
+  fields:
+    vlan_name: vlan-name
+    vlan_description: vlan-description
+
+  fields_phy:
+    temporary_teste: vlan-member/vlan-member-interface
