@@ -145,6 +145,11 @@ RUN pip install pysnmp
 RUN pip install termcolor
 
 #
+# Install Python TimeZone
+#
+RUN pip install pytz
+
+#
 # Set Timezone
 #
 ENV TZ=America/Sao_Paulo
