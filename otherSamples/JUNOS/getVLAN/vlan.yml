@@ -1,17 +1,29 @@
 ---
-customVLAN:
+customVlan:
   rpc: get-vlan-information
+  args:
+    extensive: True
   item: vlan
   key: vlan-tag
-  view: customVLANView
+  view: customVlanIDView
 
-customVLANView:
+customVlanIDView:
   groups:
-    phy: vlan-detail/vlan-member-list
+    grpVlanDetail: vlan-detail
+    grpVlanMemberListInterface: vlan-detail/vlan-member-list
 
   fields:
     vlan_name: vlan-name
+    vlan_status: vlan-status
+    vlan_owner: vlan-owner
+    vlan_createTime: vlan-create-time
+    vlan_protocolPort: vlan-protocol-port
     vlan_description: vlan-description
 
-  fields_phy:
-    temporary_teste: vlan-member/vlan-member-interface
+  fields_grpVlanDetail:
+    vlan_macAgingTime: vlan-mac-aging-time
+
+  fields_grpVlanMemberListInterface:
+    vlan_interfaceMember: vlan-member/vlan-member-interface
+    vlan_tagnessMember: vlan-member/vlan-member-tagness
+    vlan_portModeMember: vlan-member/vlan-member-port-mode

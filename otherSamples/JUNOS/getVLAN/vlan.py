@@ -46,7 +46,7 @@ if __name__ == '__main__':
     loadYAML('vlan.yml')
 
     # Get de dados do disposito baseado no YAML file
-    getCustomData = customVLAN(junosDev)
+    getCustomData = customVlan(junosDev)
 
     myCustomData = getCustomData.get().to_json()
 
