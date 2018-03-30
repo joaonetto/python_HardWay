@@ -158,10 +158,10 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 #
 # Some ENV for Junos Project
 #
-ENV PyEZ_User = ''
-ENV PyEZ_Pass = ''
-ENV snmpPort = 161
-ENV snmpCommunity = GrupoPython
+ENV PyEZ_User ''
+ENV PyEZ_Pass ''
+ENV snmpPort 161
+ENV snmpCommunity GrupoPython
 
 #
 # Create a Volume
