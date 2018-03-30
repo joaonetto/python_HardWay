@@ -98,7 +98,7 @@ RUN cd /usr/local/bin \
 	&& ln -s python3-config python-config
 
 # if this is called "PIP_VERSION", pip explodes with "ValueError: invalid truth value '<VERSION>'"
-ENV PYTHON_PIP_VERSION 9.0.1
+ENV PYTHON_PIP_VERSION 9.0.3
 
 RUN set -ex; \
 	\
@@ -154,6 +154,14 @@ RUN pip install pytz
 #
 ENV TZ=America/Sao_Paulo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+#
+# Some ENV for Junos Project
+#
+ENV PyEZ_User = ''
+ENV PyEZ_Pass = ''
+ENV snmpPort = 161
+ENV snmpCommunity = GrupoPython
 
 #
 # Create a Volume
