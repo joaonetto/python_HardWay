@@ -34,7 +34,12 @@ def loadYAML(nameFile):
 # Inicio das funções
 if __name__ == '__main__':
 
-    device_ip = '10.151.2.251'
+#import sys
+
+#script, input_encoding, error = sys.argv
+
+    device_ip = sys.argv[1]
+    print(device_ip)
 
     # Inicia Variavel para conexao com o Juniper
     junosDev = Device(host=str(device_ip), user=os.environ['PyEZ_User'], password=os.environ['PyEZ_Pass'])
@@ -48,8 +53,16 @@ if __name__ == '__main__':
     # Get de dados do disposito baseado no YAML file
     getCustomData = customAEPhyPortTable(junosDev)
 
-    myCustomData = getCustomData.get(interface_name='ae0').to_json()
+    myCustomData = str()
+    #myCustomData = getCustomData.get(interface_name='ae0').to_json()
+    try:
+        myCustomData = getCustomData.get().to_json()
+    except RuntimeError as err:
+        print(err)
 
-    myCustomData = json.loads(myCustomData)
-    print(json.dumps(myCustomData, indent=2))
+    print(type(myCustomData))
+    print(len(myCustomData))
+
+    #myCustomData = json.loads(myCustomData)
+    #print(json.dumps(myCustomData, indent=2))
     exit(1)

@@ -3,7 +3,7 @@ customAEPhyPortTable:
   rpc: get-interface-information
   args:
     extensive: True
-    interface_name: '[ae]-*'
+    interface_name: '[ae]*'
   args_key: interface_name
   item: physical-interface
   view: customAEPhyPortView
