@@ -6,11 +6,23 @@ with open('output_vlan.json') as f:
 with open('output.json') as f:
     myDictionary = json.load(f)
 
+def getVlanConnected(myInterface, vlanConnected):
+    if '*' in myInterface:
+        vlanConnected = True
+        myInterface = myInterface[0:myInterface.find('.')]
+    else:
+        vlanConnected = False
+        myInterface = myInterface[0:myInterface.find('.')]
+    return myInterface, vlanConnected
+
+interfacePHY = str()
+connectedVLAN = bool()
+
 contTemp1 = myDictionary.copy()
 for myHardware in contTemp1['hardware']:
-    contTemp1['hardware'][myHardware].update({'vlans': {'vlanID': {},'vlanName': {}}})
+    contTemp1['hardware'][myHardware].update({'vlans': {'vlan_id': {},'vlan_name': {}}})
     for vlanID in myVlan:
-        contTemp1['hardware'][myHardware]['vlans']['vlanID'].update(
+        contTemp1['hardware'][myHardware]['vlans']['vlan_id'].update(
             {vlanID:
                 {
                     'vlan_name': myVlan[vlanID]['vlan_name'],
@@ -23,25 +35,40 @@ for myHardware in contTemp1['hardware']:
                 }
             }
         )
+        contTemp1['hardware'][myHardware]['vlans']['vlan_name'].update(
+            {myVlan[vlanID]['vlan_name']:
+                {
+                    'vlan_id': vlanID
+                }
+            }
+        )
         if myVlan[vlanID]['vlan_interfaceMember'] is not None:
             if isinstance(myVlan[vlanID]['vlan_interfaceMember'], str) == True:
-                contTemp1['hardware'][myHardware]['vlans']['vlanID'][vlanID].update(
-                    {myVlan[vlanID]['vlan_interfaceMember']:
+                interfacePHY, connectedVLAN = getVlanConnected(myVlan[vlanID]['vlan_interfaceMember'], connectedVLAN)
+                contTemp1['hardware'][myHardware]['vlans']['vlan_id'][vlanID].update(
+                    {interfacePHY:
                         {
                             'tagnessMember': myVlan[vlanID]['vlan_tagnessMember'],
-                            'portModeMember': myVlan[vlanID]['vlan_portModeMember']
+                            'portModeMember': myVlan[vlanID]['vlan_portModeMember'],
+                            'connectedVlan': connectedVLAN
                         }
                     }
                 )
             else:
                 for interfaceMember in range(0,len(myVlan[vlanID]['vlan_interfaceMember'])):
-                    contTemp1['hardware'][myHardware]['vlans']['vlanID'][vlanID].update(
-                        {myVlan[vlanID]['vlan_interfaceMember'][interfaceMember]:
+                    interfacePHY, connectedVLAN = getVlanConnected(myVlan[vlanID]['vlan_interfaceMember'][interfaceMember], connectedVLAN)
+                    contTemp1['hardware'][myHardware]['vlans']['vlan_id'][vlanID].update(
+                        {interfacePHY:
                             {
                                 'tagnessMember': myVlan[vlanID]['vlan_tagnessMember'][interfaceMember],
-                                'portModeMember': myVlan[vlanID]['vlan_portModeMember'][interfaceMember]
+                                'portModeMember': myVlan[vlanID]['vlan_portModeMember'][interfaceMember],
+                                'connectedVlan': connectedVLAN
                             }
                         }
                     )
+myDictionary = contTemp1.copy()
+
+with open('output_final.json', 'w') as f:
+    json.dump(myDictionary, f, indent = 2)
 
 print(json.dumps(contTemp1, indent=2))
