@@ -3,8 +3,10 @@
 import argparse
 import logging
 import logging.handlers
+import socket
 from sys import argv
 
+myHostname = socket.gethostname()
 myPy = argv[0]
 parser = argparse.ArgumentParser(__file__,
                                  description="A syslog message generator")
@@ -57,4 +59,4 @@ if __name__ == "__main__":
     handler = logging.handlers.SysLogHandler(address=(args.address, args.port),
                                              facility=19)
     syslogger.addHandler(handler)
-    syslogger.log(syslogger.level, '<'+args.level+'> ' + '<pyProg='+myPy+'> ' + args.message)
+    syslogger.log(syslogger.level, '<'+args.level+'> <Conteiner=' + myHostname+ '> <pyProg='+myPy+'> ' + args.message)
