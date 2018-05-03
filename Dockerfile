@@ -3,7 +3,7 @@
 #
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
-# Python 3.6.4
+# Python 3.6.5
 
 FROM buildpack-deps:jessie
 
@@ -47,7 +47,7 @@ ENV PYTHONIOENCODING=utf-8
 
 # call PYTHON
 ENV GPG_KEY 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D
-ENV PYTHON_VERSION 3.6.4
+ENV PYTHON_VERSION 3.6.5
 
 RUN set -ex \
 	&& buildDeps=' \
@@ -98,7 +98,7 @@ RUN cd /usr/local/bin \
 	&& ln -s python3-config python-config
 
 # if this is called "PIP_VERSION", pip explodes with "ValueError: invalid truth value '<VERSION>'"
-ENV PYTHON_PIP_VERSION 9.0.3
+ENV PYTHON_PIP_VERSION 10.0.1
 
 RUN set -ex; \
 	\
@@ -172,5 +172,11 @@ VOLUME /var/python_hardway
 # Change WorkDir
 #
 WORKDIR /var/python_hardway
+
+#
+# Radius Port
+#
+EXPOSE 1812:1812/udp
+EXPOSE 1813:1813/udp
 
 # CMD ["python3"]
