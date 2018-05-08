@@ -19,6 +19,8 @@ print("Opening the File...")
 # Opções:
 # 'w'	open for writing, truncating the file first.
 #   -> Neste caso o conteudo será apagado
+# 'r'  read only
+#   -> Somente a leitura do arquivo
 # 'a'	open for writing, appending to the end of the file if it exists
 #   -> Abrirá o arquivo para gravação e conatenará as novas linhas ao final.
 # 't'	text mode (default)

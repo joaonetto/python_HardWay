@@ -1,0 +1,9 @@
+{
+  "joao.netto@actar.com.br": {
+    "everyDay": "00:00:00,23:59:59"
+  },
+  "joao.reis@actar.com.br": {
+    "Sun": "00:00:00,23:59:59",
+    "Sat": "00:01:00,21:59:59"
+  }
+}

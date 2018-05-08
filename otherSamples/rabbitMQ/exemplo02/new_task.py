@@ -16,6 +16,7 @@ channel.basic_publish(exchange='',
                       properties=pika.BasicProperties(
                          delivery_mode = 2, # make message persistent
                       ))
+print(" [x] Enviando: %r" % myMessage)
 
 myQueue = 'myTask_02'
 myMessage = 'Message to ' + myQueue

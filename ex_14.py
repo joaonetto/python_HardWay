@@ -4,6 +4,9 @@ from sys import argv
 if len(sys.argv) < 2:
     print(f"Para este escript é necessário 2 argumentos, mas você passou apenas {len(sys.argv)}")
     exit()
+
+print(argv)
+print(type(argv))
 # print("This is the name of the script: ", sys.argv[0])
 # print("Number of arguments: ", len(sys.argv))
 # print("The arguments are: " , str(sys.argv))
