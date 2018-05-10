@@ -50,6 +50,18 @@ def workingHours():
         myEndDate = datetime.now().strftime("%d %b %y") + ' ' + myJSonDate[1]
         myEndDate = datetime.strptime(myEndDate, '%d %b %y %H:%M:%S').timestamp()
 
+    print(f'A hora em myDateNow.timestamp() é: {myDateNow}')
+    print(f'A hora em myBgnDate.timestamp() é: {myBgnDate}')
+    print(f'A hora em myEndDate.timestamp() é: {myEndDate}')
+    print("="*50)
+    print(f"A hora em myDateNow.datetime() é: {datetime.fromtimestamp(int(myDateNow)).strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"A hora em myBgnDate.datetime() é: {datetime.fromtimestamp(int(myBgnDate)).strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"A hora em myEndDate.datetime() é: {datetime.fromtimestamp(int(myEndDate)).strftime('%Y-%m-%d %H:%M:%S')}")
+    print("="*50)
+    print(f'A Diferença entre myEndDate e myBgnDate em timestamp(): {int(myEndDate - myDateNow)}')
+    print(f"A Diferença entre myEndDate e myBgnDate em datetime(): {datetime.fromtimestamp(int(myDateNow+(myEndDate-myDateNow))).strftime('%Y-%m-%d %H:%M:%S')}")
+    print("="*50)
+
     if myDateNow >= myBgnDate:
         print('A data/hora atual esta após o inicio do dia')
         if myDateNow <= myEndDate:
